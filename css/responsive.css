@@ -1,0 +1,15 @@
+@media(max-width:760px){
+  .section{padding:86px 18px}.section-title{font-size:clamp(48px,15vw,72px)}.section-lead{font-size:18px}
+  .opening__paper{padding:50px 28px 38px}.opening__botanical{width:280px;opacity:.55}.opening__botanical--left{left:-125px;bottom:-20px}.opening__botanical--right{right:-125px;top:-30px}.opening__paper h1{font-size:54px}.opening__copy{font-size:16px}
+  .hero{padding-top:92px}.hero-photo{width:min(340px,82vw)}.hero__intro{font-size:29px}.hero__lead{font-size:17px}.botanical--hero{width:240px;left:-100px}
+  .story-grid{gap:45px;margin-top:48px}.story-card,.story-card--two{grid-template-columns:1fr;gap:20px}.story-card--two .story-card__copy{order:2}.story-card__photo{width:min(310px,78vw);margin:auto}.story-card__copy{text-align:center;max-width:440px;margin:auto}.story-card__copy h3{font-size:42px}.story-quote{margin-top:55px}.story-quote p{font-size:29px}
+  .full-photo,.full-photo img,.final-photo,.final-photo img{min-height:70svh}.full-photo__caption span{font-size:37px}.final-photo__text p{font-size:38px}
+  .date-card{grid-template-columns:1fr;margin-top:35px}.date-card__left{padding:30px}.date-card__left strong{font-size:78px}.date-card__right{padding:28px;text-align:center}.date-card__right strong{font-size:50px}.countdown strong{font-size:36px}.countdown span{font-size:7px}
+  .venue{min-height:690px}.venue-card{padding:32px 20px}.venue-card h3{font-size:49px}.botanical--venue{width:300px}
+  .memory-strip__inner{grid-template-columns:1fr 1fr;grid-template-areas:'copy copy' 'left right';gap:25px;min-height:auto}.memory-strip__copy{grid-area:copy}.memory-polaroid--left{grid-area:left}.memory-polaroid--right{grid-area:right}.memory-strip__copy p{font-size:35px}.memory-strip__copy h2{font-size:56px}.memory-polaroid{padding:7px 7px 28px}.memory-polaroid figcaption{font-size:13px}
+  .dress-card{grid-template-columns:72px 1fr;padding:25px 20px;gap:17px}.dress-card__icon{width:72px;height:72px}.dress-card strong{font-size:43px}.dress-card p{font-size:15px}
+  .gallery-mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px;gap:10px}.gallery-item--1,.gallery-item--4,.gallery-item--8{grid-column:span 2}.gallery-item--2,.gallery-item--3,.gallery-item--5,.gallery-item--6,.gallery-item--7{grid-column:span 1}.gallery-item--1{grid-row:span 2}.gallery-item--2,.gallery-item--3,.gallery-item--4,.gallery-item--5,.gallery-item--6,.gallery-item--7{grid-row:span 1}.gallery-item--8{grid-row:span 2}
+  .ring-story__inner{grid-template-columns:1fr;gap:38px}.ring-story__photo{width:min(320px,80vw)}.ring-story__copy{text-align:center}.ring-story__copy h2{font-size:52px}.ring-story__copy>p{font-size:17px;margin-left:auto;margin-right:auto}.mini-signature{margin-top:20px}
+  .contact-grid{grid-template-columns:1fr;max-width:420px}.contact-card{padding:30px 20px}.closing__thanks{font-size:38px}.closing__names{font-size:53px}.botanical--closing-left,.botanical--closing-right{width:240px}
+}
+@media(min-width:761px) and (max-width:1100px){.memory-strip__inner{grid-template-columns:180px 1fr 180px}.story-card{gap:30px}.gallery-mosaic{grid-auto-rows:80px}}

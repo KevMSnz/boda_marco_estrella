@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" fill="none">
+  <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 490C112 407 116 321 178 240C226 178 280 113 365 34" stroke-width="3"/>
+    <path d="M111 382C73 345 57 303 60 263C102 276 127 315 111 382Z" stroke-width="2.4"/>
+    <path d="M147 318C121 272 123 229 142 196C180 219 186 265 147 318Z" stroke-width="2.4"/>
+    <path d="M190 252C172 202 183 161 211 132C242 165 231 211 190 252Z" stroke-width="2.4"/>
+    <path d="M236 195C232 145 253 111 286 90C304 127 284 164 236 195Z" stroke-width="2.4"/>
+    <path d="M280 137C290 95 320 70 354 64C359 101 328 125 280 137Z" stroke-width="2.4"/>
+    <path d="M82 435C48 414 31 381 33 349C68 353 92 385 82 435Z" stroke-width="2.4"/>
+    <path d="M337 84C343 57 365 38 391 35C390 62 367 82 337 84Z" stroke-width="2.4"/>
+  </g>
+  <g fill="currentColor" opacity=".96">
+    <path d="M69 259c10-34 34-49 57-49-3 28-25 48-57 49Z"/>
+    <path d="M137 198c11-34 36-49 59-47-5 28-28 46-59 47Z"/>
+    <path d="M208 133c15-31 42-41 64-35-8 27-32 42-64 35Z"/>
+    <path d="M286 90c22-25 49-27 68-15-14 23-39 31-68 15Z"/>
+    <path d="M33 350c25-22 53-21 72-8-20 18-46 20-72 8Z"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="2.4">
+    <circle cx="357" cy="31" r="13"/><circle cx="374" cy="43" r="13"/><circle cx="349" cy="49" r="13"/>
+    <circle cx="357" cy="41" r="6" fill="currentColor"/>
+  </g>
+</svg>
