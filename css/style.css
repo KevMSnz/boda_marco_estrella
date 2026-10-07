@@ -1,8 +1,8 @@
 :root{
-  --burgundy:#52141F;--garnet:#772734;--terracotta:#CA6846;--peach:#EF9557;--blush:#F4CDD4;
+  --burgundy:#cf8234;--garnet:#772734;--terracotta:#8b0023d3;--peach:#EF9557;--blush:#F4CDD4;
   --ivory:#FFF9F4;--paper:#F7EFE7;--ink:#3B2427;--muted:#765E60;--white:#fff;--line:rgba(82,20,31,.18);
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--script:'Great Vibes',cursive;
-  --shadow:0 24px 70px rgba(82,20,31,.13);--radius:28px;
+  --shadow:0 24px 70px rgba(82, 40, 20, 0.13);--radius:28px;
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);overflow-x:hidden}.is-locked{overflow:hidden}.grain{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}.invitation{opacity:0;visibility:hidden;transition:opacity 1s ease;position:relative}.invitation-open .invitation{opacity:1;visibility:visible}.section{position:relative;padding:clamp(90px,13vw,150px) 22px;overflow:hidden}.section__inner{max-width:1050px;margin:0 auto;position:relative;z-index:2}.section__inner--narrow{max-width:780px}.section__inner--wide{max-width:1180px}.section--ivory{background:var(--ivory)}.section--paper{background:var(--paper)}.section--blush{background:var(--blush)}.section--peach{background:var(--peach)}.section--burgundy{background:var(--burgundy);color:var(--white)}.section--garnet{background:var(--garnet);color:var(--white)}.script{font-family:var(--script);font-weight:400}.eyebrow{margin:0 0 12px;text-transform:uppercase;letter-spacing:.22em;font-size:10px;font-weight:700;color:var(--garnet)}.eyebrow--light{color:var(--blush)}.section-title{font-family:var(--serif);font-size:clamp(48px,8vw,86px);line-height:.86;font-weight:500;letter-spacing:-.04em;margin:0;color:var(--burgundy)}.section-title em,.hero__names em,.closing__names em{font-family:var(--script);font-style:normal;color:var(--garnet);font-size:1.08em;letter-spacing:0}.section-title--light{color:var(--white)}.section-title--light em{color:var(--blush)}.section-lead{max-width:620px;margin:24px auto 0;color:var(--muted);font-family:var(--serif);font-size:20px;line-height:1.4}.ornament{display:flex;align-items:center;gap:13px;justify-content:center;width:min(250px,70%);margin:22px auto}.ornament span{height:1px;background:currentColor;opacity:.35;flex:1}.ornament b{font-size:12px;font-weight:400;color:var(--terracotta)}.button{border:0;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease,background .3s ease}.button:hover{transform:translateY(-2px)}.button span{font-size:17px;line-height:0}.button--primary{background:var(--burgundy);color:var(--white);box-shadow:0 16px 34px rgba(82,20,31,.25)}.button--primary:hover{box-shadow:0 20px 42px rgba(82,20,31,.32)}.button--light{background:var(--white);color:var(--burgundy);box-shadow:0 14px 30px rgba(0,0,0,.12)}.button--wide{width:100%}.is-disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
 
@@ -46,3 +46,678 @@
 .final-photo{min-height:75svh}.final-photo img{min-height:75svh;object-position:center 40%}.final-photo__text{position:absolute;z-index:2;bottom:10%;left:50%;transform:translateX(-50%);width:90%;text-align:center;color:white}.final-photo__text p{font-size:45px;margin:0}.final-photo__text span{display:block;margin-top:12px;font-size:18px}.closing{text-align:center;min-height:650px;display:grid;place-items:center}.closing__thanks{font-size:44px;max-width:620px;margin:25px auto;color:var(--blush);line-height:1}.closing__monogram{font:34px var(--serif);margin-top:25px;color:white}.closing__monogram span{font-family:var(--script);color:var(--peach);font-size:44px}.closing__names{font:500 64px var(--serif);margin:8px 0 0;color:white}.closing__names em{color:var(--peach)}.closing__date{font:10px var(--sans);letter-spacing:.25em;margin:13px 0;color:var(--blush)}.closing__final{font:17px/1.4 var(--serif);color:rgba(255,255,255,.7);max-width:430px;margin:22px auto}.closing__ornament{display:flex;align-items:center;gap:13px;justify-content:center;color:var(--peach);margin-top:30px}.closing__ornament span{width:70px;height:1px;background:var(--peach);opacity:.5}.botanical--closing-left{width:320px;left:-130px;bottom:-60px;color:var(--blush);opacity:.1;transform:rotate(-25deg)}.botanical--closing-right{width:300px;right:-120px;top:-50px;color:var(--blush);opacity:.1;transform:rotate(155deg)}
 
 @keyframes paperFloat{0%,100%{transform:translateY(0) rotate(.2deg)}50%{transform:translateY(-5px) rotate(-.2deg)}}@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Opening letter: the existing invitation sheet stays intact inside a real letter. */
+.opening__letter{
+  position:relative;
+  width:min(560px,92vw);
+  height:min(720px,88vh);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:34px 30px 30px;
+  isolation:isolate;
+  filter:drop-shadow(0 34px 60px rgba(0,0,0,.28));
+}
+.opening__letter::before{
+  content:"";
+  position:absolute;
+  inset:8px 0 0;
+  z-index:-3;
+  border-radius:7px;
+  background:linear-gradient(145deg,#c85f3e 0%,#b95236 52%,#a84731 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -18px 35px rgba(91,31,23,.16);
+}
+.opening__letter::after{
+  content:"";
+  position:absolute;
+  left:4%;right:4%;bottom:2%;height:45%;
+  z-index:-1;
+  border-radius:0 0 7px 7px;
+  background:linear-gradient(155deg,rgba(239,149,87,.96),rgba(202,104,70,.98));
+  clip-path:polygon(0 0,50% 44%,100% 0,100% 100%,0 100%);
+  opacity:.92;
+}
+.opening__letter-flap{
+  position:absolute;
+  top:8px;left:0;right:0;height:46%;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(145deg,#d36c4a,#bc5639);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:7px 7px 0 0;
+  opacity:.98;
+  filter:drop-shadow(0 4px 5px rgba(80,25,18,.08));
+}
+.opening__letter-border{
+  position:absolute;
+  inset:20px 16px 14px;
+  z-index:3;
+  pointer-events:none;
+  border:1px solid rgba(255,238,225,.36);
+  border-radius:4px;
+}
+.opening__paper{
+  z-index:4;
+  width:100%;
+  max-width:470px;
+  max-height:calc(100% - 8px);
+  box-sizing:border-box;
+  padding:52px 34px 36px;
+  overflow:hidden;
+  animation:paperFloat 7s ease-in-out infinite;
+  /* Keep the original invitation sheet exactly as it was, including its torn silhouette. */
+  border:1px solid rgba(82,20,31,.13);
+  border-radius:2px;
+  box-shadow:0 18px 34px rgba(72,24,19,.18);
+}
+.opening__paper::before{
+  inset:12px;
+  border:1px solid rgba(82,20,31,.14);
+}
+.opening__letter .opening__paper h1{font-size:clamp(43px,10vw,68px)}
+.opening__letter .opening__copy{font-size:16px}
+.opening__letter .opening__button{position:relative;z-index:6}
+.opening__letter .opening__hint{position:relative;z-index:6}
+
+@media (max-width:700px){
+  .opening__letter{width:min(94vw,500px);height:min(720px,86vh);padding:28px 22px 24px}
+  .opening__paper{padding:44px 26px 30px}
+  .opening__letter-flap{height:40%}
+  .opening__letter-border{inset:15px 11px 10px}
+}
+@media (max-height:700px) and (min-width:701px){
+  .opening__letter{height:90vh;width:min(520px,90vw);padding:22px 24px}
+  .opening__paper{padding:34px 30px 26px}
+  .opening__letter-flap{height:40%}
+}
+
+/* --- Opening envelope: closed envelope with the original invitation sheet safely inside --- */
+.opening__letter{
+  position:relative;
+  width:min(500px,88vw);
+  height:min(700px,84vh);
+  display:block;
+  padding:0;
+  isolation:isolate;
+  filter:drop-shadow(0 34px 55px rgba(53,18,16,.28));
+  perspective:1200px;
+}
+.opening__envelope-back{
+  position:absolute;inset:0;z-index:0;border-radius:12px;
+  background:linear-gradient(155deg,#d77957 0%,#c96545 46%,#b65338 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -25px 50px rgba(88,29,21,.18);
+}
+.opening__envelope-back::before{
+  content:"";position:absolute;inset:12px;border:1px solid rgba(255,244,232,.38);border-radius:7px;
+}
+.opening__paper{
+  position:absolute;z-index:2;left:50%;top:3%;width:88%;height:94%;
+  max-width:none;max-height:none;margin:0;
+  padding:54px 34px 36px;
+  overflow:hidden;
+  transform:translate(-50%,15%) scale(.84);
+  transform-origin:center bottom;
+  transition:transform .95s cubic-bezier(.2,.8,.2,1),box-shadow .95s ease;
+  box-shadow:0 16px 34px rgba(72,24,19,.22);
+}
+.opening__envelope-front{
+  position:absolute;z-index:5;left:0;right:0;bottom:0;height:52%;
+  background:linear-gradient(160deg,#c85f3f 0%,#b95237 100%);
+  clip-path:polygon(0 0,50% 43%,100% 0,100% 100%,0 100%);
+  filter:drop-shadow(0 -5px 7px rgba(70,22,17,.12));
+  transform-origin:center bottom;
+  transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .7s ease;
+}
+.opening__envelope-front::after{
+  content:"";position:absolute;left:6%;right:6%;bottom:5%;height:1px;background:rgba(255,239,226,.25);
+}
+.opening__letter-flap{
+  position:absolute;z-index:6;top:0;left:0;right:0;height:52%;
+  background:linear-gradient(155deg,#db7956 0%,#c96243 100%);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:12px 12px 0 0;
+  transform-origin:50% 0%;
+  backface-visibility:hidden;
+  transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .7s ease;
+  filter:drop-shadow(0 5px 6px rgba(74,24,18,.1));
+}
+.opening__letter-flap::after{
+  content:"";position:absolute;inset:14px 14px auto;height:1px;background:rgba(255,244,232,.2);
+}
+.opening__letter-border{position:absolute;inset:14px;z-index:7;pointer-events:none;border:1px solid rgba(255,241,228,.28);border-radius:8px}
+.opening__envelope-trigger{
+  position:absolute;z-index:10;left:50%;bottom:62px;transform:translateX(-50%);
+  min-width:220px;height:54px;padding:0 25px;border:0;border-radius:999px;
+  background:var(--burgundy);color:#fff;font:700 11px var(--sans);letter-spacing:.13em;text-transform:uppercase;
+  box-shadow:0 15px 30px rgba(72,22,18,.24);cursor:pointer;
+  transition:opacity .35s ease,transform .35s ease,box-shadow .3s ease;
+}
+.opening__envelope-trigger:hover{box-shadow:0 19px 38px rgba(72,22,18,.3);transform:translateX(-50%) translateY(-2px)}
+.opening__envelope-trigger span{font-size:17px;margin-left:10px}
+.opening__button,.opening__hint{visibility:hidden;opacity:0;pointer-events:none}
+.opening.is-envelope-open .opening__paper{transform:translate(-50%,-3%) scale(.96);box-shadow:0 25px 50px rgba(72,24,19,.2)}
+.opening.is-envelope-open .opening__envelope-front{transform:translateY(72%);opacity:.35}
+.opening.is-envelope-open .opening__letter-flap{transform:rotateX(180deg);opacity:.25}
+.opening.is-envelope-open .opening__envelope-trigger{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(8px)}
+@media (max-width:700px){
+  .opening__letter{width:min(94vw,430px);height:min(650px,84vh)}
+  .opening__paper{padding:48px 26px 32px}
+  .opening__envelope-trigger{bottom:54px;min-width:205px}
+}
+@media (prefers-reduced-motion:reduce){
+  .opening__paper,.opening__envelope-front,.opening__letter-flap,.opening__envelope-trigger{transition:none!important}
+}
+
+/* FINAL OPENING FIX: closed physical envelope with the original invitation sheet fully inside. */
+.opening__letter{
+  width:min(500px,88vw);
+  height:min(700px,84vh);
+  position:relative;
+  display:block;
+  padding:0;
+  overflow:visible;
+  isolation:isolate;
+  perspective:1400px;
+}
+.opening__envelope-back{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  border-radius:10px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#d57957 0%,#c96746 48%,#b65439 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -24px 46px rgba(84,28,20,.17);
+}
+.opening__envelope-back::before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(255,244,232,.34);
+  border-radius:6px;
+}
+/* The original invitation sheet is physically behind the envelope's front pocket. */
+.opening__paper{
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:5%;
+  width:88%;
+  height:91%;
+  max-width:none;
+  max-height:none;
+  margin:0;
+  padding:54px 34px 36px;
+  overflow:hidden;
+  transform:translate(-50%,38%) scale(.88);
+  transform-origin:center bottom;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),box-shadow 1s ease;
+  box-shadow:0 16px 34px rgba(72,24,19,.18);
+  animation:none;
+}
+/* Lower/front pocket: this is what makes the envelope look closed instead of leaving the sheet on top. */
+.opening__envelope-front{
+  position:absolute;
+  z-index:5;
+  left:0;
+  right:0;
+  bottom:0;
+  height:58%;
+  background:linear-gradient(155deg,#c86443 0%,#b85137 100%);
+  clip-path:polygon(0 0,50% 42%,100% 0,100% 100%,0 100%);
+  filter:drop-shadow(0 -5px 7px rgba(70,22,17,.12));
+  transform:translateY(0);
+  transform-origin:center bottom;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),opacity .7s ease;
+}
+.opening__envelope-front::after{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:6%;
+  height:1px;
+  background:rgba(255,239,226,.24);
+}
+/* Top flap, closed at rest and lifted when the envelope opens. */
+.opening__letter-flap{
+  position:absolute;
+  z-index:6;
+  top:35px;
+  left:0;
+  right:0;
+  height:56%;
+  background:linear-gradient(155deg,#dd7b58 0%,#c96443 100%);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:10px 10px 0 0;
+  transform-origin:50% 0%;
+  transform:rotateX(0deg);
+  backface-visibility:hidden;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),opacity .7s ease;
+  filter:drop-shadow(0 5px 6px rgba(74,24,18,.1));
+}
+.opening__letter-flap::after{
+  content:"";
+  position:absolute;
+  inset:14px 14px auto;
+  height:1px;
+  background:rgba(255,244,232,.22);
+}
+.opening__letter-border{
+  position:absolute;
+  inset:14px;
+  z-index:7;
+  pointer-events:none;
+  border:1px solid rgba(255,241,228,.28);
+  border-radius:7px;
+}
+/* Invisible click surface: no extra button is visually added to the design. */
+.opening__envelope-trigger{
+  position:absolute;
+  z-index:20;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-width:0;
+  padding:0;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  color:transparent;
+  font-size:0;
+  cursor:pointer;
+  box-shadow:none;
+}
+.opening__envelope-trigger:hover{
+  transform:none;
+  box-shadow:none;
+}
+.opening__envelope-trigger span{display:none}
+/* Before the envelope opens, the sheet's own button is genuinely inaccessible because the sheet is inside. */
+.opening__button,.opening__hint{
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .45s ease .55s,visibility 0s linear .55s;
+}
+.opening.is-envelope-open .opening__paper{
+  transform:translate(-50%,-4%) scale(.94);
+  box-shadow:0 25px 50px rgba(72,24,19,.2);
+  z-index:8;
+}
+.opening.is-envelope-open .opening__envelope-front{
+  transform:translateY(88%);
+  opacity:.18;
+  z-index:3;
+}
+.opening.is-envelope-open .opening__letter-flap{
+  transform:rotateX(180deg);
+  opacity:.12;
+  z-index:1;
+}
+.opening.is-envelope-open .opening__envelope-trigger{
+  opacity:0;
+  pointer-events:none;
+}
+.opening.is-envelope-open .opening__button,
+.opening.is-envelope-open .opening__hint{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+}
+
+@media(max-width:700px){
+  .opening__letter{width:min(94vw,430px);height:min(650px,84vh)}
+  .opening__paper{padding:48px 26px 32px}
+}
+@media(prefers-reduced-motion:reduce){
+  .opening__paper,.opening__envelope-front,.opening__letter-flap,.opening__envelope-trigger,.opening__button,.opening__hint{transition:none!important}
+}
+
+/* =========================================================
+   APERTURA DEL SOBRE — CORRECCIÓN DEFINITIVA
+   La hoja permanece COMPLETAMENTE dentro del sobre cerrado.
+   Al abrir: solapa arriba + bolsillo abajo + hoja al centro.
+   ========================================================= */
+.opening__letter{
+  width:min(570px,94vw);
+  height:min(700px,90vh);
+  position:relative;
+  display:block;
+  padding:0;
+  overflow:visible;
+  isolation:isolate;
+  perspective:1400px;
+}
+
+
+/* Base del sobre */
+.opening__envelope-back{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  border-radius:11px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#d57957 0%,#c96746 48%,#b65439 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -24px 46px rgba(84,28,20,.17);
+}
+.opening__envelope-back::before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(255,244,232,.34);
+  border-radius:7px;
+}
+
+/* HOJA ORIGINAL: físicamente detrás de las partes del sobre */
+.opening__paper{
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top: -10px;
+  width:68%;
+  height:81%;
+  max-width:none;
+  max-height:none;
+  margin:0;
+  box-sizing:border-box;
+  padding:54px 34px 36px;
+  overflow:hidden;
+  transform:translate(-50%,24%) scale(.88);
+  transform-origin:center bottom;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),box-shadow 1s ease;
+  box-shadow:0 16px 34px rgba(72,24,19,.18);
+  animation:none;
+}
+
+/* Bolsillo delantero. Su borde superior forma una V y tapa la parte baja. */
+.opening__envelope-front{
+  position:absolute;
+  z-index:5;
+  left:0;
+  right:0;
+  bottom:0;
+  height:72%;
+  background:linear-gradient(155deg,#c86443 0%,#b85137 100%);
+  clip-path:polygon(0 28%,50% 51%,100% 28%,100% 100%,0 100%);
+  filter:drop-shadow(0 -5px 7px rgba(70,22,17,.12));
+  transform:translateY(0);
+  transform-origin:center bottom;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),opacity .7s ease;
+}
+.opening__envelope-front::after{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:6%;
+  height:1px;
+  background:rgba(255,239,226,.24);
+}
+
+/* Solapa superior cerrada. Cubre la parte alta de la hoja. */
+.opening__letter-flap{
+  position:absolute;
+  z-index:6;
+  top:0;
+  left:0;
+  right:0;
+  height:56%;
+  background:linear-gradient(155deg,#dd7b58 0%,#c96443 100%);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:11px 11px 0 0;
+  transform-origin:50% 0%;
+  transform:rotateX(0deg);
+  backface-visibility:hidden;
+  transition:transform 1s cubic-bezier(.2,.78,.2,1),opacity .7s ease;
+  filter:drop-shadow(0 5px 6px rgba(74,24,18,.1));
+}
+.opening__letter-flap::after{
+  content:"";
+  position:absolute;
+  inset:14px 14px auto;
+  height:1px;
+  background:rgba(255,244,232,.22);
+}
+
+.opening__letter-border{
+  position:absolute;
+  inset:14px;
+  z-index:7;
+  pointer-events:none;
+  border:1px solid rgba(255,241,228,.28);
+  border-radius:7px;
+}
+
+/* Área invisible para abrir el sobre. No añade ningún botón visual. */
+.opening__envelope-trigger{
+  position:absolute;
+  z-index:20;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-width:0;
+  padding:0;
+  border:0;
+  border-radius:11px;
+  background:transparent;
+  color:transparent;
+  font-size:0;
+  cursor:pointer;
+  box-shadow:none;
+}
+.opening__envelope-trigger:hover,
+.opening__envelope-trigger:focus-visible{
+  transform:none;
+  box-shadow:none;
+}
+.opening__envelope-trigger span{display:none}
+
+/* El botón de la hoja NO participa mientras está dentro del sobre. */
+.opening__button,
+.opening__hint{
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .45s ease .55s,visibility 0s linear .55s;
+}
+
+/* ABIERTO: el bolsillo baja, la solapa sube y la hoja sale recta por el centro. */
+.opening.is-envelope-open .opening__paper{
+  z-index:8;
+  transform:translate(-50%,-3%) scale(.94);
+  box-shadow:0 25px 50px rgba(72,24,19,.20);
+}
+.opening.is-envelope-open .opening__envelope-front{
+  transform:translateY(105%);
+  opacity:0;
+  z-index:3;
+}
+.opening.is-envelope-open .opening__letter-flap{
+  transform:rotateX(180deg);
+  opacity:0;
+  z-index:1;
+}
+.opening.is-envelope-open .opening__envelope-trigger{
+  opacity:0;
+  pointer-events:none;
+}
+.opening.is-envelope-open .opening__button,
+.opening.is-envelope-open .opening__hint{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+}
+
+@media(max-width:700px){
+  .opening__letter{width:min(94vw,430px);height:min(650px,84vh)}
+  .opening__paper{padding:48px 26px 32px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .opening__paper,
+  .opening__envelope-front,
+  .opening__letter-flap,
+  .opening__envelope-trigger,
+  .opening__button,
+  .opening__hint{transition:none!important}
+}
+
+/* ============================================================
+   FASE FINAL — ACABADO VISUAL
+   ------------------------------------------------------------
+   Este bloque reúne los ajustes finales para que la invitación
+   tenga una estética editorial, romántica y coherente.
+   Los colores principales de la boda son TERRACOTA + PEACH.
+   ============================================================ */
+:root{
+  --burgundy:#52141F;
+  --garnet:#772734;
+  --terracotta:#CA6846;
+  --peach:#EF9557;
+  --blush:#F4CDD4;
+  --ivory:#FFF9F4;
+  --paper:#F7EFE7;
+  --ink:#3B2427;
+  --muted:#765E60;
+  --white:#FFFFFF;
+  --line:rgba(82,20,31,.16);
+  --shadow:0 24px 70px rgba(82,40,20,.13);
+}
+
+/* Fondo con pequeñas variaciones para evitar bloques planos. */
+.section--ivory{background:linear-gradient(180deg,#fffaf6 0%,#fff7f1 100%)}
+.section--paper{background:linear-gradient(180deg,#f9eee5 0%,#f7e9df 100%)}
+.section--blush{background:linear-gradient(180deg,#f8dfe3 0%,#f4cfd5 100%)}
+.section--peach{background:linear-gradient(180deg,#ef9557 0%,#e58a50 100%)}
+
+/* Terracota como acento dominante. */
+.eyebrow{color:var(--terracotta)}
+.ornament b{color:var(--terracotta)}
+.section-title em,.hero__names em{color:var(--terracotta)}
+.button--primary{background:var(--terracotta);box-shadow:0 16px 34px rgba(202,104,70,.28)}
+.button--primary:hover{background:#b85c3e;box-shadow:0 20px 42px rgba(202,104,70,.34)}
+
+/* Flores: movimiento muy suave para que parezcan parte del papel. */
+.botanical{will-change:transform;animation:botanicalFloat 9s ease-in-out infinite}
+.botanical--right,.botanical--closing-right{animation-delay:-3s}
+.botanical--day,.botanical--dress{animation-delay:-5s}
+@keyframes botanicalFloat{
+  0%,100%{filter:drop-shadow(0 5px 8px rgba(82,20,31,.04))}
+  50%{filter:drop-shadow(0 10px 13px rgba(82,20,31,.09))}
+}
+
+/* Cinta de papel y pequeñas imperfecciones editoriales. */
+.torn-photo{isolation:isolate}
+.torn-photo::before{
+  content:"";
+  position:absolute;
+  inset:-7px;
+  z-index:-2;
+  background:var(--ivory);
+  clip-path:polygon(0 3%,8% 0,16% 2%,25% 0,35% 2%,45% 0,56% 2%,66% 0,76% 3%,86% 1%,96% 4%,100% 10%,98% 22%,100% 35%,98% 48%,100% 61%,98% 74%,100% 88%,96% 100%,84% 98%,72% 100%,60% 98%,48% 100%,36% 98%,24% 100%,12% 97%,0 100%,2% 86%,0 73%,2% 60%,0 47%,2% 34%,0 20%);
+}
+
+/* Entrada de fotografías con sensación de fotografía física. */
+.hero-photo,.story-card__photo,.ring-story__photo,.memory-polaroid{
+  transition:transform .8s cubic-bezier(.2,.75,.2,1),box-shadow .8s ease;
+}
+.hero-photo:hover{transform:rotate(-1deg) translateY(-6px);box-shadow:0 30px 70px rgba(82,20,31,.18)}
+.story-card__photo:hover{transform:rotate(1deg) translateY(-5px);box-shadow:0 30px 65px rgba(82,20,31,.2)}
+
+/* Papel rasgado más orgánico entre bloques. */
+.paper-section::before,.paper-section::after{
+  content:"";
+  position:absolute;
+  left:-2%;width:104%;height:28px;
+  background:var(--ivory);
+  z-index:3;
+  pointer-events:none;
+}
+.paper-section::before{
+  top:-13px;
+  clip-path:polygon(0 40%,4% 15%,8% 48%,12% 8%,16% 43%,20% 19%,25% 53%,30% 11%,35% 45%,40% 17%,45% 55%,50% 9%,55% 48%,60% 18%,65% 53%,70% 13%,75% 48%,80% 20%,85% 54%,90% 10%,95% 45%,100% 20%,100% 100%,0 100%);
+}
+.paper-section::after{
+  bottom:-13px;
+  transform:rotate(180deg);
+  clip-path:polygon(0 40%,4% 15%,8% 48%,12% 8%,16% 43%,20% 19%,25% 53%,30% 11%,35% 45%,40% 17%,45% 55%,50% 9%,55% 48%,60% 18%,65% 53%,70% 13%,75% 48%,80% 20%,85% 54%,90% 10%,95% 45%,100% 20%,100% 100%,0 100%);
+}
+
+/* Secciones de fotografía a pantalla completa: ligero zoom al pasar. */
+.full-photo img,.final-photo img{transition:transform 8s cubic-bezier(.2,.7,.2,1)}
+.full-photo:hover img,.final-photo:hover img{transform:scale(1.035)}
+
+/* Galería editorial: cada foto parece una impresión física. */
+.gallery-mosaic{perspective:1200px}
+.gallery-item{border:1px solid rgba(82,20,31,.08);isolation:isolate}
+.gallery-item:nth-child(2n){transform:rotate(.45deg)}
+.gallery-item:nth-child(3n){transform:rotate(-.65deg)}
+.gallery-item:nth-child(5n){transform:rotate(.9deg)}
+.gallery-item::before{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(120deg,rgba(255,255,255,.16),transparent 35%,rgba(82,20,31,.08));
+  mix-blend-mode:soft-light;
+}
+.gallery-item:hover{z-index:5;transform:translateY(-7px) rotate(0deg);box-shadow:0 28px 65px rgba(82,20,31,.2)}
+.gallery-item:hover img{transform:scale(1.07)}
+
+/* Pequeñas tarjetas con acabado de invitación impresa. */
+.date-card,.dress-card,.contact-card,.venue-card,.rsvp-card{position:relative;overflow:hidden}
+.date-card::after,.dress-card::after,.contact-card::after{
+  content:"";position:absolute;inset:8px;pointer-events:none;border:1px solid rgba(202,104,70,.13)
+}
+.date-card__left{background:linear-gradient(145deg,var(--peach),#e98c51);color:var(--burgundy)}
+.date-card__left strong{color:var(--burgundy)}
+.date-card__right strong{color:var(--terracotta)}
+.countdown strong{color:var(--terracotta)}
+
+/* Lugar: el vino queda como contraste, no como color dominante. */
+.venue{background:linear-gradient(145deg,#52141f 0%,#69212e 55%,#772734 100%)}
+.venue-card{border-color:rgba(239,149,87,.34)}
+.venue-card__rule{background:var(--peach)}
+.venue-card h3 em{color:var(--peach)}
+
+/* Vestimenta: pequeño sello terracota. */
+.dress-card__icon{background:var(--terracotta);color:var(--ivory);box-shadow:0 10px 25px rgba(202,104,70,.25)}
+.dress-card strong{color:var(--burgundy)}
+
+/* RSVP con una textura visual más cálida. */
+.rsvp{background:linear-gradient(145deg,var(--garnet),var(--burgundy))}
+.rsvp-card{border-color:rgba(239,149,87,.32)}
+.rsvp-card__seal{border-color:rgba(239,149,87,.6)}
+
+/* WhatsApp: diferenciación discreta sin romper la paleta. */
+.contact-card__icon{background:var(--terracotta)}
+.contact-card strong{color:var(--burgundy)}
+
+/* Cierre con un halo peach detrás de los nombres. */
+.closing{background:radial-gradient(circle at 50% 42%,rgba(239,149,87,.18),transparent 38%),linear-gradient(145deg,#52141f,#6b202d)}
+.closing__monogram span,.closing__names em,.closing__ornament{color:var(--peach)}
+
+/* Cinta vertical decorativa para dar continuidad al recorrido. */
+.section:not(.section--burgundy):not(.section--garnet)::after{
+  content:"";
+  position:absolute;right:22px;top:12%;width:2px;height:70px;
+  background:linear-gradient(var(--terracotta),transparent);opacity:.18;pointer-events:none;
+}
+
+/* Botón de música listo para la fase final. */
+.music-toggle{border-color:rgba(202,104,70,.3)}
+.music-toggle__disc{background:var(--terracotta)}
+
+/* Accesibilidad: respetar la preferencia del sistema. */
+@media(prefers-reduced-motion:reduce){
+  .botanical{animation:none}
+  .full-photo img,.final-photo img{transition:none}
+  .gallery-item{transform:none!important}
+}
+
+/* Responsive final. */
+@media(max-width:760px){
+  .section{padding-left:18px;padding-right:18px}
+  .gallery-mosaic{gap:9px}
+  .gallery-item:nth-child(n){transform:none}
+  .gallery-item:hover{transform:none}
+  .section:not(.section--burgundy):not(.section--garnet)::after{right:9px}
+}
