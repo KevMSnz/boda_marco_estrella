@@ -863,3 +863,95 @@
 .ring-story__monogram span {
   color: #772734;
 }
+
+/* Sello de lacre dorado: botón decorativo y funcional de la tapa */
+.opening__envelope-trigger {
+  position: absolute;
+  z-index: 15;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.opening__envelope-trigger:hover,
+.opening__envelope-trigger:focus { background: transparent; box-shadow: none; }
+.opening__wax-seal {
+  display: block;
+  width: clamp(76px, 15vw, 112px);
+  filter: drop-shadow(0 4px 7px rgba(44, 8, 14, .28));
+  transition: transform .28s ease, filter .28s ease;
+}
+.opening__wax-heart { display: block; width: 100%; height: auto; overflow: visible; }
+.opening__envelope-trigger:hover .opening__wax-seal {
+  transform: translateY(-2px) scale(1.06);
+  filter: drop-shadow(0 7px 10px rgba(44, 8, 14, .35)) brightness(1.06);
+}
+.opening__envelope-trigger:active .opening__wax-seal { transform: scale(.94); }
+.opening__envelope-trigger .opening__touch-label {
+  margin: 0;
+  color: #ffe7c0;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 5px rgba(40, 5, 12, .65);
+}
+.opening__envelope-trigger:focus-visible { outline: 2px solid #ffe7c0; outline-offset: 8px; border-radius: 8px; }
+@media (max-width: 480px) { .opening__wax-seal { width: 82px; } .opening__envelope-trigger .opening__touch-label { font-size: 9px; } }
+
+/* FIX: mantener visible el sello y su texto sobre la tapa cerrada */
+.opening__envelope-trigger .opening__wax-seal {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 2;
+}
+.opening__envelope-trigger .opening__touch-label {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 2;
+}
+.opening__envelope-trigger span:not(.opening__touch-label) {
+  display: block !important;
+}
+.opening__envelope-trigger {
+  z-index: 20 !important;
+  pointer-events: auto;
+}
+.opening__envelope-trigger .opening__wax-heart {
+  display: block !important;
+  width: 100%;
+  height: auto;
+}
+
+
+/* CORRECCION: el sello no se desplaza al acercar o pulsar el cursor */
+.opening__envelope-trigger:hover,
+.opening__envelope-trigger:focus,
+.opening__envelope-trigger:focus-visible,
+.opening__envelope-trigger:active {
+  transform: translate(-50%, -50%) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.opening__envelope-trigger:hover .opening__wax-seal,
+.opening__envelope-trigger:focus .opening__wax-seal,
+.opening__envelope-trigger:active .opening__wax-seal {
+  transform: none !important;
+  filter: drop-shadow(0 4px 7px rgba(44, 8, 14, .28));
+}
