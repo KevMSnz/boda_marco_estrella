@@ -3,7 +3,7 @@ window.invitation = {
   novia: 'Estrella',
   fechaISO: '2026-11-14T16:00:00-05:00',
   fechaTexto: '14 de noviembre de 2026',
-  hora: '4:00 PM',
+  hora: '7:00 PM',
   lugar: 'La Casona Dorada Campestre',
   direccion: 'C. Los Cocalenos 716, San Juan de Lurigancho 15434',
   googleMaps: 'https://maps.app.goo.gl/j8dkCji4X76YWPFRA?g_st=ic',

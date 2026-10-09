@@ -40,7 +40,7 @@
 .ring-story__inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.ring-story__photo{aspect-ratio:3/4;max-width:360px;margin:auto;background:var(--ivory);padding:10px;box-shadow:var(--shadow)}.ring-story__photo img{width:100%;height:100%;object-fit:cover}.ring-story__copy .eyebrow{margin-bottom:18px}.ring-story__copy h2{font:500 clamp(48px,6vw,72px)/.9 var(--serif);color:var(--burgundy);margin:0 0 22px}.ring-story__copy h2 em{font-family:var(--script);font-style:normal;color:var(--terracotta)}.ring-story__copy>p{font:19px/1.5 var(--serif);color:var(--muted);max-width:450px}.mini-signature{font:24px var(--serif);color:var(--burgundy);margin-top:25px}.mini-signature span{font-family:var(--script);color:var(--terracotta)}
 
 /* rsvp/contact */
-.rsvp{text-align:center;min-height:650px;display:grid;place-items:center}.botanical--rsvp{width:380px;right:-130px;top:-30px;color:var(--blush);opacity:.1;transform:rotate(90deg)}.rsvp-card{max-width:580px;margin:40px auto 0;padding:38px;background:rgba(255,255,255,.08);border:1px solid rgba(244,205,212,.25);box-shadow:0 30px 80px rgba(0,0,0,.14)}.rsvp-card__seal{width:76px;height:76px;border-radius:50%;border:1px solid rgba(244,205,212,.45);display:grid;place-items:center;margin:0 auto 22px;font:25px var(--serif);color:white}.rsvp-card__seal span{font-family:var(--script);color:var(--peach);font-size:30px}.rsvp-card p{font:20px/1.4 var(--serif);color:rgba(255,255,255,.78);margin:0 0 25px}.contact{text-align:center}.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:650px;margin:45px auto 0}.contact-card{display:flex;flex-direction:column;align-items:center;text-decoration:none;padding:34px 20px;background:white;border:1px solid rgba(82,20,31,.08);box-shadow:0 16px 45px rgba(82,20,31,.08);color:var(--burgundy);transition:transform .3s ease,box-shadow .3s ease}.contact-card:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(82,20,31,.13)}.contact-card__icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--burgundy);color:white;font:700 10px var(--sans);letter-spacing:.04em}.contact-card small{margin-top:17px;font:700 8px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta)}.contact-card strong{font:500 42px var(--serif);line-height:1;margin:5px 0}.contact-card>span:last-child{font:10px var(--sans);text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+.rsvp{text-align:center;min-height:650px;display:grid;place-items:center}.botanical--rsvp{width:380px;right:-130px;top:-30px;color:var(--blush);opacity:.1;transform:rotate(90deg)}.rsvp-card{max-width:580px;margin:40px auto 0;padding:38px;background:rgba(255,255,255,.08);border:1px solid rgba(244,205,212,.25);box-shadow:0 30px 80px rgba(0,0,0,.14)}.rsvp-card__seal{width:76px;height:76px;box-sizing:border-box;border-radius:50%;border:1px solid rgba(244,205,212,.45);display:flex;align-items:center;justify-content:center;gap:2px;margin:0 auto 22px;padding:0 8px;white-space:nowrap;font:25px/1 var(--serif);color:white;flex-shrink:0}.rsvp-card__seal .rsvp-card__initial{display:inline-block;font:25px/1 var(--serif);color:white}.rsvp-card__seal .rsvp-card__amp{display:inline-block;font:italic 27px/1 var(--script);color:var(--peach);transform:translateY(1px)}.rsvp-card p{font:20px/1.4 var(--serif);color:rgba(255,255,255,.78);margin:0 0 25px}.contact{text-align:center}.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:650px;margin:45px auto 0}.contact-card{display:flex;flex-direction:column;align-items:center;text-decoration:none;padding:34px 20px;background:white;border:1px solid rgba(82,20,31,.08);box-shadow:0 16px 45px rgba(82,20,31,.08);color:var(--burgundy);transition:transform .3s ease,box-shadow .3s ease}.contact-card:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(82,20,31,.13)}.contact-card__icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--burgundy);color:white;font:700 10px var(--sans);letter-spacing:.04em}.contact-card small{margin-top:17px;font:700 8px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta)}.contact-card strong{font:500 42px var(--serif);line-height:1;margin:5px 0}.contact-card>span:last-child{font:10px var(--sans);text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
 
 /* final */
 .final-photo{min-height:75svh}.final-photo img{min-height:75svh;object-position:center 40%}.final-photo__text{position:absolute;z-index:2;bottom:10%;left:50%;transform:translateX(-50%);width:90%;text-align:center;color:white}.final-photo__text p{font-size:45px;margin:0}.final-photo__text span{display:block;margin-top:12px;font-size:18px}.closing{text-align:center;min-height:650px;display:grid;place-items:center}.closing__thanks{font-size:44px;max-width:620px;margin:25px auto;color:var(--blush);line-height:1}.closing__monogram{font:34px var(--serif);margin-top:25px;color:white}.closing__monogram span{font-family:var(--script);color:var(--peach);font-size:44px}.closing__names{font:500 64px var(--serif);margin:8px 0 0;color:white}.closing__names em{color:var(--peach)}.closing__date{font:10px var(--sans);letter-spacing:.25em;margin:13px 0;color:var(--blush)}.closing__final{font:17px/1.4 var(--serif);color:rgba(255,255,255,.7);max-width:430px;margin:22px auto}.closing__ornament{display:flex;align-items:center;gap:13px;justify-content:center;color:var(--peach);margin-top:30px}.closing__ornament span{width:70px;height:1px;background:var(--peach);opacity:.5}.botanical--closing-left{width:320px;left:-130px;bottom:-60px;color:var(--blush);opacity:.1;transform:rotate(-25deg)}.botanical--closing-right{width:300px;right:-120px;top:-50px;color:var(--blush);opacity:.1;transform:rotate(155deg)}
@@ -595,8 +595,8 @@
 .eyebrow{color:var(--terracotta)}
 .ornament b{color:var(--terracotta)}
 .section-title em,.hero__names em{color:var(--terracotta)}
-.button--primary{background:var(--terracotta);box-shadow:0 16px 34px rgba(202,104,70,.28)}
-.button--primary:hover{background:#b85c3e;box-shadow:0 20px 42px rgba(202,104,70,.34)}
+.button--primary{background:var(--terracotta);box-shadow:0 16px 34px rgba(253, 249, 248, 0.28)}
+.button--primary:hover{background:#140802;box-shadow:0 20px 42px rgba(29, 13, 8, 0.34)}
 
 /* Flores: movimiento muy suave para que parezcan parte del papel. */
 .botanical{will-change:transform;animation:botanicalFloat 9s ease-in-out infinite}
@@ -720,4 +720,146 @@
   .gallery-item:nth-child(n){transform:none}
   .gallery-item:hover{transform:none}
   .section:not(.section--burgundy):not(.section--garnet)::after{right:9px}
+}
+
+/* APERTURA ACTUALIZADA: tapa editorial de dos hojas que se abre hacia los lados. */
+.opening__letter{width:min(500px,88vw);height:min(700px,84svh);max-height:760px;isolation:isolate;perspective:1600px;}
+.opening__envelope-back{background:transparent;box-shadow:none;border-radius:0;}
+.opening__paper{z-index:1;top:2%;height:96%;width:94%;padding:clamp(32px,5vh,54px) clamp(18px,4vw,34px) 30px;transform:translate(-50%,0) scale(.97);box-shadow:0 16px 34px rgba(72,24,19,.22);}
+.opening__cover-half{position:absolute;top:0;bottom:0;width:50.2%;z-index:10;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#d77b58 0%,#c96746 48%,#9d3d32 100%);border:1px solid rgba(255,235,218,.32);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),inset 0 -18px 35px rgba(37,8,16,.15);transition:transform 1.15s cubic-bezier(.18,.78,.18,1),opacity .7s ease;backface-visibility:hidden;}
+.opening__cover-half--left{left:0;transform-origin:left center;border-radius:10px 0 0 10px;border-right:0;}
+.opening__cover-half--right{right:0;transform-origin:right center;border-radius:0 10px 10px 0;border-left:0;}
+.opening__cover-half::before{content:"";position:absolute;inset:12px 7px;border:1px solid rgba(255,225,205,.25);pointer-events:none;}
+.opening__cover-half--left::before{border-right:0;}
+.opening__cover-half--right::before{border-left:0;}
+.opening__cover-line{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(transparent,rgba(239,149,87,.8),rgba(255,239,220,.45),transparent);opacity:.6;}
+.opening__cover-half--left .opening__cover-line{right:0;}
+.opening__cover-half--right .opening__cover-line{left:0;}
+.opening__letter-border{z-index:12;inset:12px;border:1px solid rgba(255,235,218,.3);border-radius:5px;}
+.opening__envelope-trigger{z-index:20;inset:0;width:100%;height:100%;min-width:0;bottom:auto;left:0;transform:none;border-radius:10px;background:transparent;color:#fff;box-shadow:none;display:flex;flex-direction:column;gap:9px;align-items:center;justify-content:center;font:700 12px var(--sans);letter-spacing:.28em;text-transform:uppercase;}
+.opening__envelope-trigger:hover,.opening__envelope-trigger:focus-visible{transform:none;box-shadow:none;background:rgba(255,255,255,.025);}
+.opening__touch-icon{display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,220,193,.65);border-radius:50%;color:#f5b17f;font-size:19px;letter-spacing:0;box-shadow:0 0 0 6px rgba(255,231,210,.045);transition:transform .3s ease,background .3s ease;}
+.opening__envelope-trigger:hover .opening__touch-icon{transform:scale(1.07);background:rgba(255,255,255,.08);}
+.opening__touch-label{font-size:11px;letter-spacing:.3em;padding-left:.3em;}
+.opening__envelope-trigger span:not(.opening__touch-icon):not(.opening__touch-label){display:none;}
+.opening__button,.opening__hint{visibility:hidden;opacity:0;pointer-events:none;transition:opacity .4s ease .65s,visibility 0s linear .65s;}
+.opening.is-envelope-open .opening__cover-half--left{transform:translateX(-102%) rotateY(8deg);opacity:0;pointer-events:none;}
+.opening.is-envelope-open .opening__cover-half--right{transform:translateX(102%) rotateY(-8deg);opacity:0;pointer-events:none;}
+.opening.is-envelope-open .opening__paper{z-index:8;transform:translate(-50%,0) scale(1);box-shadow:0 24px 50px rgba(35,9,17,.25);}
+.opening.is-envelope-open .opening__letter-border{opacity:0;}
+.opening.is-envelope-open .opening__envelope-trigger{opacity:0;pointer-events:none;}
+.opening.is-envelope-open .opening__button,.opening.is-envelope-open .opening__hint{visibility:visible;opacity:1;pointer-events:auto;}
+.opening.is-open .opening__letter{transform:scale(.98);}
+@media(max-width:700px){
+ .opening__letter{width:min(90vw,410px);height:min(650px,82svh);}
+ .opening__paper{width:94%;height:96%;top:2%;padding:clamp(28px,5vh,44px) clamp(17px,5vw,25px) 24px;}
+ .opening__cover-half::before{inset:10px 5px;}
+ .opening__touch-icon{width:42px;height:42px;}
+ .opening__touch-label{font-size:10px;}
+}
+@media(max-width:380px){.opening__letter{width:91vw;height:min(610px,80svh)}.opening__paper{padding:27px 15px 20px}.opening__letter .opening__copy{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.opening__cover-half,.opening__touch-icon{transition:none!important}}
+
+
+/* Adornos florales adicionales: transparencias recortadas y ubicaciones decorativas. */
+.wedding-ornament{position:absolute;z-index:0;display:block;height:auto;object-fit:contain;pointer-events:none;user-select:none;filter:drop-shadow(0 8px 14px rgba(82,20,31,.07));}
+.hero__inner,.story .section__inner,.memory-strip__inner,.dress .section__inner,.gallery .section__inner,.closing .section__inner{position:relative;z-index:1}
+.wedding-ornament--hero{width:clamp(95px,17vw,175px);left:-28px;bottom:8%;opacity:.42;transform:rotate(-8deg)}
+.wedding-ornament--story{width:clamp(100px,18vw,190px);right:-24px;top:17%;opacity:.24;transform:rotate(8deg)}
+.wedding-ornament--memory{width:clamp(220px,47vw,460px);left:50%;top:50%;transform:translate(-50%,-50%);opacity:.23;z-index:0}
+.wedding-ornament--dress{width:clamp(190px,32vw,340px);right:-62px;bottom:-20px;opacity:.38;transform:rotate(-4deg)}
+.wedding-ornament--gallery{width:clamp(100px,18vw,185px);left:-32px;bottom:4%;opacity:.25;transform:rotate(180deg)}
+.wedding-ornament--closing{width:clamp(135px,24vw,250px);right:-42px;bottom:-20px;opacity:.25;transform:rotate(180deg)}
+@media(max-width:760px){
+ .wedding-ornament--hero{width:110px;left:-36px;bottom:7%;opacity:.28}
+ .wedding-ornament--story{width:105px;right:-35px;top:13%;opacity:.18}
+ .wedding-ornament--memory{width:250px;opacity:.17;top:57%}
+ .wedding-ornament--dress{width:190px;right:-68px;bottom:-8px;opacity:.28}
+ .wedding-ornament--gallery{width:105px;left:-40px;bottom:2%;opacity:.2}
+ .wedding-ornament--closing{width:145px;right:-50px;bottom:-12px;opacity:.18}
+}
+@media(prefers-reduced-motion:reduce){.wedding-ornament{filter:none}}
+
+
+/* Adornos adicionales: detalles discretos que no compiten con el contenido. */
+.ring-story,.rsvp,.contact{position:relative;isolation:isolate;overflow:hidden}
+.ring-story__inner,.rsvp .section__inner,.contact .section__inner{position:relative;z-index:1}
+.wedding-ornament--ring{width:clamp(100px,17vw,180px);left:-35px;top:7%;opacity:.16;transform:rotate(-18deg)}
+.wedding-ornament--rsvp{width:clamp(115px,19vw,205px);left:-48px;bottom:-18px;opacity:.13;transform:rotate(12deg);filter:brightness(0) invert(1);}
+.wedding-ornament--contact{width:clamp(210px,34vw,330px);right:-72px;bottom:-35px;opacity:.20;mix-blend-mode:multiply}
+@media(max-width:760px){
+  .rsvp-card__seal{width:76px;height:76px;gap:1px;padding:0 7px}
+  .rsvp-card__seal .rsvp-card__initial{font-size:24px}
+  .rsvp-card__seal .rsvp-card__amp{font-size:26px}
+  .wedding-ornament--ring{width:105px;left:-45px;top:5%;opacity:.12}
+  .wedding-ornament--rsvp{width:120px;left:-42px;bottom:-12px;opacity:.10}
+  .wedding-ornament--contact{width:205px;right:-83px;bottom:-18px;opacity:.16}
+}
+
+/* ==========================================================
+   FONDOS INDEPENDIENTES POR SECCIÓN
+   Cambia estos valores uno por uno: no afectan a otras partes.
+   Puedes usar un color (#CA6846) o un degradado (linear-gradient(...)).
+   ========================================================== */
+:root{
+  --bg-opening: var(--burgundy);
+  --bg-hero: linear-gradient(180deg,#EF9557 0%,#ec9451 100%);
+  --bg-story: linear-gradient(180deg,#f8dfe3 0%,#f4cfd5 100%);
+  --bg-day: linear-gradient(180deg,#ffb272 0%,#f5a78d 100%);
+  --bg-venue: linear-gradient(145deg,#D99AA5 0%,#D99AA5 50%,#FFF9F4 100%);
+  --bg-memory: linear-gradient(155deg,#ef9557 0%,#e58a50 100%);
+  --bg-dress: linear-gradient(180deg,#FFF9F4 0%,#FFF9F4 100%);
+  --bg-gallery: linear-gradient(180deg,#ef9557 0%,#f3a673 100%);
+  --bg-ring-story: linear-gradient(180deg,#f9eee5 0%,#f7e9df 100%);
+  --bg-rsvp: linear-gradient(145deg,#EF9557,#e4935d);
+  --bg-contact: linear-gradient(180deg,#fffaf6 0%,#fff7f1 100%);
+  --bg-closing: radial-gradient(circle at 50% 42%,#c2532e,transparent 38%),linear-gradient(145deg,#c2532e,#CA6846);
+}
+.opening{background:var(--bg-opening)}
+.hero{background:var(--bg-hero)}
+.story{background:var(--bg-story)}
+.day{background:var(--bg-day)}
+.venue{background:var(--bg-venue)}
+.memory-strip{background:var(--bg-memory)}
+.dress{background:var(--bg-dress)}
+.gallery{background:var(--bg-gallery)}
+.ring-story{background:var(--bg-ring-story)}
+.rsvp{background:var(--bg-rsvp)}
+.contact{background:var(--bg-contact)}
+.closing{background:var(--bg-closing)}
+
+/* Color exclusivo del botón Abrir invitación */
+.opening__button {
+  background: #52141f;
+  color: #FFFFFF;
+  border-color: #52141f;
+}
+
+.opening__button:hover {
+  background: #52141f;
+  border-color: #52141f;
+}
+
+/* Color exclusivo del botón Confirmar asistencia */
+#formButton {
+  background: #52141F;
+  color: #FFFFFF;
+  border-color: #52141F;
+  box-shadow: 0 12px 28px rgba(82, 20, 31, 0.25);
+}
+
+#formButton:hover {
+  background: #772734;
+  border-color: #772734;
+}
+
+/* Círculo decorativo M & E */
+.ring-story__monogram {
+  border-color: #772734;
+  color: #551923;
+}
+
+/* Símbolo & del monograma */
+.ring-story__monogram span {
+  color: #772734;
 }

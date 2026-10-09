@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#52141F" />
-  <meta name="description" content="Invitación de boda de Marco & Estrella — 14 de noviembre de 2026." />
+  <meta name="description" content="Invitación de boda de Marco & Estrella — l4 de noviembre de 2026." />
   <title>Marco & Estrella — Nuestra boda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <div class="opening__wash" aria-hidden="true"></div>
     <img class="opening__botanical opening__botanical--left" src="assets/decor/botanical.svg" alt="">
     <img class="opening__botanical opening__botanical--right" src="assets/decor/botanical.svg" alt="">
-    <div class="opening__letter" aria-label="Sobre con la invitación">
+    <div class="opening__letter" aria-label="Tapa de la invitación">
       <div class="opening__envelope-back" aria-hidden="true"></div>
       <div class="opening__paper">
         <div class="opening__topline"><span></span><b>✦</b><span></span></div>
@@ -28,15 +28,15 @@
       <p class="eyebrow">Una invitación especial</p>
       <p class="script opening__script">Con mucho amor</p>
       <h1>Marco <em>&amp;</em> Estrella</h1>
-      <div class="opening__ornament">❧ &nbsp; 14 · 11 · 2026 &nbsp; ❧</div>
+      <div class="opening__ornament">❧ &nbsp; l4 · ll · 2026 &nbsp; ❧</div>
       <p class="opening__copy">Tenemos el honor de invitarte a compartir uno de los días más importantes de nuestras vidas.</p>
       <button class="button button--primary opening__button" id="openInvitation" type="button">Abrir invitación <span>↗</span></button>
         <p class="opening__hint">Toca para abrir</p>
       </div>
-      <div class="opening__envelope-front" aria-hidden="true"></div>
-      <div class="opening__letter-flap" aria-hidden="true"></div>
+      <div class="opening__cover-half opening__cover-half--left" aria-hidden="true"><span class="opening__cover-line"></span></div>
+      <div class="opening__cover-half opening__cover-half--right" aria-hidden="true"><span class="opening__cover-line"></span></div>
       <div class="opening__letter-border" aria-hidden="true"></div>
-      <button class="opening__envelope-trigger" id="openEnvelope" type="button" aria-label="Abrir invitación">Abrir invitación <span>↗</span></button>
+      <button class="opening__envelope-trigger" id="openEnvelope" type="button" aria-label="Tocar para abrir la tapa"><span class="opening__touch-icon" aria-hidden="true">✦</span><span class="opening__touch-label">Tocar</span></button>
     </div>
   </section>
 
@@ -46,6 +46,7 @@
     </button>
 
     <section class="hero section section--ivory">
+      <img class="wedding-ornament wedding-ornament--hero" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <img class="botanical botanical--hero" src="assets/decor/botanical.svg" alt="">
       <div class="hero__inner">
         <p class="eyebrow reveal">Nuestro gran día</p>
@@ -58,12 +59,13 @@
         </figure>
         <h2 class="hero__names reveal reveal--delay-3">Marco <em>&amp;</em> Estrella</h2>
         <p class="hero__lead reveal reveal--delay-4">Queremos celebrar este nuevo capítulo rodeados de las personas que queremos.</p>
-        <div class="date-pill reveal reveal--delay-4"><span>14</span><i></i><div><b>NOVIEMBRE</b><small>2026 · 4:00 PM</small></div></div>
+        <div class="date-pill reveal reveal--delay-4"><span>l4</span><i></i><div><b>NOVIEMBRE</b><small>2026 · 7:00 PM</small></div></div>
       </div>
       <div class="scroll-cue"><span></span><small>Desliza</small></div>
     </section>
 
     <section class="story section section--blush paper-section">
+      <img class="wedding-ornament wedding-ornament--story" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <div class="paper-tear paper-tear--top"></div>
       <img class="botanical botanical--story" src="assets/decor/botanical.svg" alt="">
       <div class="section__inner">
@@ -103,8 +105,8 @@
         <h2 class="section-title reveal reveal--delay-1">Nuestro gran <em>día</em></h2>
         <div class="ornament reveal reveal--delay-2"><span></span><b>✦</b><span></span></div>
         <div class="date-card reveal reveal--delay-2">
-          <div class="date-card__left"><small>SÁBADO</small><strong>14</strong><span>NOVIEMBRE</span><i>2026</i></div>
-          <div class="date-card__right"><span>La celebración comienza</span><strong>4:00 PM</strong><small>Te esperamos para compartir este momento.</small></div>
+          <div class="date-card__left"><small>SÁBADO</small><strong>l4</strong><span>NOVIEMBRE</span><i>2026</i></div>
+          <div class="date-card__right"><span>La celebración comienza</span><strong>7:00 PM</strong><small>Te esperamos para compartir este momento.</small></div>
         </div>
         <p class="countdown-title reveal reveal--delay-3">Faltan...</p>
         <div class="countdown reveal reveal--delay-3" id="countdown" aria-label="Cuenta regresiva">
@@ -128,13 +130,14 @@
           <h3>La Casona<br><em>Dorada Campestre</em></h3>
           <div class="venue-card__rule"></div>
           <p class="venue-card__address">C. Los Cocalenos 716<br>San Juan de Lurigancho 15434</p>
-          <div class="venue-card__time"><span>Hora</span><b>4:00 PM</b></div>
+          <div class="venue-card__time"><span>Hora</span><b>7:00 PM</b></div>
           <a class="button button--light button--wide" id="mapsButton" href="https://maps.app.goo.gl/j8dkCji4X76YWPFRA?g_st=ic" target="_blank" rel="noopener noreferrer">Ver ubicación <span>↗</span></a>
         </div>
       </div>
     </section>
 
     <section class="memory-strip section section--peach">
+      <img class="wedding-ornament wedding-ornament--memory" src="assets/decor/eucalipto-flores.png" alt="" aria-hidden="true">
       <div class="memory-strip__inner">
         <figure class="memory-polaroid memory-polaroid--left reveal"><img src="assets/images/foto-04.jpg" alt="Marco y Estrella"><figcaption>Siempre juntos</figcaption></figure>
         <div class="memory-strip__copy reveal reveal--delay-1"><p class="script">Los mejores recuerdos</p><h2>se viven <em>juntos.</em></h2><span>♥</span></div>
@@ -143,6 +146,7 @@
     </section>
 
     <section class="dress section section--blush">
+      <img class="wedding-ornament wedding-ornament--dress" src="assets/decor/eucalipto-flores.png" alt="" aria-hidden="true">
       <img class="botanical botanical--dress" src="assets/decor/botanical-small.svg" alt="">
       <div class="section__inner section__inner--narrow">
         <p class="eyebrow reveal">Para acompañarnos</p>
@@ -155,6 +159,7 @@
     </section>
 
     <section class="gallery section section--ivory">
+      <img class="wedding-ornament wedding-ornament--gallery" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <div class="section__inner section__inner--wide">
         <p class="eyebrow reveal">Nuestros recuerdos</p>
         <h2 class="section-title reveal reveal--delay-1">Momentos que <em>guardamos</em></h2>
@@ -173,6 +178,7 @@
     </section>
 
     <section class="ring-story section section--paper">
+      <img class="wedding-ornament wedding-ornament--ring" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <div class="ring-story__inner section__inner">
         <figure class="ring-story__photo torn-photo reveal"><img src="assets/images/foto-12.jpg" alt="Anillo de compromiso junto a flores rojas"></figure>
         <div class="ring-story__copy reveal reveal--delay-1"><p class="eyebrow">Y llegó el momento</p><h2>Una promesa que ahora tiene <em>fecha.</em></h2><p>Un anillo, una pregunta y un sí que nos trajo hasta este día que queremos compartir contigo.</p><div class="mini-signature">M <span>&amp;</span> E</div></div>
@@ -181,11 +187,12 @@
 
     <section class="rsvp section section--garnet">
       <img class="botanical botanical--rsvp" src="assets/decor/botanical.svg" alt="">
+      <img class="wedding-ornament wedding-ornament--rsvp" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <div class="section__inner section__inner--narrow">
         <p class="eyebrow eyebrow--light reveal">Queremos contar contigo</p>
         <h2 class="section-title section-title--light reveal reveal--delay-1">Confirma tu <em>asistencia</em></h2>
         <div class="rsvp-card reveal reveal--delay-2">
-          <div class="rsvp-card__seal">M <span>&amp;</span> E</div>
+          <div class="rsvp-card__seal" aria-label="Marco y Estrella"><span class="rsvp-card__initial">M</span><span class="rsvp-card__amp">&amp;</span><span class="rsvp-card__initial">E</span></div>
           <p>Tu presencia hará que este día sea todavía más especial para nosotros.</p>
           <a class="button button--primary button--wide" id="formButton" href="#" target="_blank" rel="noopener noreferrer">Confirmar asistencia <span>↗</span></a>
         </div>
@@ -193,6 +200,7 @@
     </section>
 
     <section class="contact section section--ivory">
+      <img class="wedding-ornament wedding-ornament--contact" src="assets/decor/eucalipto-flores.png" alt="" aria-hidden="true">
       <div class="section__inner section__inner--narrow">
         <p class="eyebrow reveal">¿Tienes alguna consulta?</p>
         <h2 class="section-title reveal reveal--delay-1">Hablemos con <em>nosotros</em></h2>
@@ -210,6 +218,7 @@
     </section>
 
     <footer class="closing section section--burgundy">
+      <img class="wedding-ornament wedding-ornament--closing" src="assets/decor/ornamento-corazon.png" alt="" aria-hidden="true">
       <img class="botanical botanical--closing-left" src="assets/decor/botanical.svg" alt="">
       <img class="botanical botanical--closing-right" src="assets/decor/botanical.svg" alt="">
       <div class="section__inner section__inner--narrow">
@@ -217,7 +226,7 @@
         <p class="script closing__thanks reveal reveal--delay-1">Gracias por ser parte de nuestra historia.</p>
         <div class="closing__monogram reveal reveal--delay-2">M <span>&amp;</span> E</div>
         <p class="closing__names reveal reveal--delay-3">Marco <em>&amp;</em> Estrella</p>
-        <p class="closing__date reveal reveal--delay-3">14 · 11 · 2026</p>
+        <p class="closing__date reveal reveal--delay-3">l4 · 11 · 2026</p>
         <p class="closing__final reveal reveal--delay-4">Te esperamos para celebrar este sueño hecho realidad.</p>
         <div class="closing__ornament reveal reveal--delay-4"><span></span>♥<span></span></div>
       </div>
