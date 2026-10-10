@@ -967,3 +967,52 @@
 .opening__cover-half--right .cover-floral { right:0; }
 .opening__cover-half--right .cover-floral--top, .opening__cover-half--right .cover-floral--bottom { transform:scaleX(-1); }
 @media(max-width:600px){ .cover-floral{width:82%;} .cover-floral--top{top:2%;}.cover-floral--bottom{bottom:2%;} }
+
+
+/* Adornos equilibrados en esquinas opuestas de la hoja interior */
+.opening__paper-florals{
+  position:absolute; z-index:0; pointer-events:none;
+  width:48%; max-width:265px; height:auto;
+  opacity:.96; object-fit:contain;
+  filter: drop-shadow(0 2px 3px rgba(82,20,31,.10));
+}
+.opening__paper-florals--top-left{
+  top:-10px; left:-22px;
+  -webkit-mask-image:linear-gradient(135deg,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(135deg,#000 0%,#000 70%,transparent 100%);
+}
+.opening__paper-florals--bottom-right{
+  right:-22px; bottom:-10px;
+  transform:rotate(180deg) scaleX(-1);
+  -webkit-mask-image:linear-gradient(315deg,#000 0%,#000 70%,transparent 100%);
+  mask-image:linear-gradient(315deg,#000 0%,#000 70%,transparent 100%);
+}
+.opening__paper-side-lines{
+  position:absolute; z-index:0; pointer-events:none;
+  width:32%; height:70%; opacity:.9;
+  border-top:3px solid #c77c24; border-right:3px solid #c77c24;
+}
+.opening__paper-side-lines--top-right{top:12px;right:12px;}
+.opening__paper-side-lines--bottom-left{
+  bottom:12px;left:12px;
+  transform:rotate(180deg);
+}
+.opening__paper-side-lines span{
+  position:absolute; display:block; top:8px; right:8px;
+  width:100%; height:100%; border-top:2px solid #e7b75a;
+  border-right:2px solid #e7b75a;
+}
+.opening__paper-side-lines span+span{
+  top:0; right:0; width:calc(100% - 1px); height:100%;
+  border-color:rgba(119,39,52,.48); border-width:1px;
+}
+.opening__paper > :not(.opening__paper-florals):not(.opening__paper-side-lines):not(:before){position:relative;z-index:1}
+@media(max-width:700px){
+ .opening__paper-florals{width:45%;opacity:.9}
+ .opening__paper-florals--top-left{top:-5px;left:-16px}
+ .opening__paper-florals--bottom-right{right:-16px;bottom:-5px}
+ .opening__paper-side-lines{width:25%;height:38%;border-width:2px}
+ .opening__paper-side-lines--top-right{top:12px;right:10px}
+ .opening__paper-side-lines--bottom-left{bottom:12px;left:10px}
+ .opening__paper-side-lines span{top:6px;right:6px;border-width:1px}
+}

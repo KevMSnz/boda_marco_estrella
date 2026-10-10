@@ -13,3 +13,86 @@
   .contact-grid{grid-template-columns:1fr;max-width:420px}.contact-card{padding:30px 20px}.closing__thanks{font-size:38px}.closing__names{font-size:53px}.botanical--closing-left,.botanical--closing-right{width:240px}
 }
 @media(min-width:761px) and (max-width:1100px){.memory-strip__inner{grid-template-columns:180px 1fr 180px}.story-card{gap:30px}.gallery-mosaic{grid-auto-rows:80px}}
+
+/* Corrección móvil: centrar los textos sobre las fotografías y evitar recortes */
+@media (max-width: 600px) {
+  .full-photo__caption,
+  .final-photo__text {
+    left: 50%;
+    right: auto;
+    width: calc(100% - 32px);
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-inline: 4px;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .full-photo__caption span {
+    font-size: clamp(27px, 8vw, 37px);
+    line-height: 1.18;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
+  .full-photo__caption small {
+    max-width: 100%;
+    font-size: clamp(8px, 2.5vw, 10px);
+    line-height: 1.5;
+    letter-spacing: clamp(.08em, .6vw, .16em);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .final-photo__text p {
+    font-size: clamp(27px, 8vw, 38px);
+    line-height: 1.18;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+}
+
+/* FIX DEFINITIVO: los bloques usan ambos laterales para centrar sin depender de transform.
+   .reveal.is-visible cambia transform y antes anulaba translateX(-50%), desplazando el texto. */
+@media (max-width: 600px) {
+  .full-photo__caption,
+  .final-photo__text {
+    left: 16px !important;
+    right: 16px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    box-sizing: border-box;
+    padding-inline: 8px;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .full-photo__caption span,
+  .full-photo__caption small,
+  .final-photo__text p {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align: center;
+  }
+
+  .full-photo__caption span {
+    font-size: clamp(25px, 7.2vw, 34px);
+    line-height: 1.2;
+  }
+
+  .full-photo__caption small {
+    font-size: clamp(8px, 2.4vw, 10px);
+    letter-spacing: .12em;
+    line-height: 1.5;
+  }
+
+  .final-photo__text p {
+    font-size: clamp(26px, 7.4vw, 36px);
+    line-height: 1.2;
+  }
+}
