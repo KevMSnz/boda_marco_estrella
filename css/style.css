@@ -955,3 +955,15 @@
   transform: none !important;
   filter: drop-shadow(0 4px 7px rgba(44, 8, 14, .28));
 }
+
+/* Se usan los mismos adornos en ambos lados; el lado derecho se refleja horizontalmente.
+   Se elimina la capa SVG adicional que duplicaba y desalineaba las flores. */
+/* Flores ornamentales texturizadas para la tapa: solo en las dos hojas de la cubierta */
+.opening__cover-half { isolation: isolate; }
+.cover-floral { position:absolute; z-index:2; width:76%; height:auto; object-fit:contain; pointer-events:none; filter: drop-shadow(0 2px 2px rgba(54,15,12,.22)) saturate(1.08); }
+.cover-floral--top { top:1.2%; }
+.cover-floral--bottom { bottom:1.2%; }
+.opening__cover-half--left .cover-floral { left:0; }
+.opening__cover-half--right .cover-floral { right:0; }
+.opening__cover-half--right .cover-floral--top, .opening__cover-half--right .cover-floral--bottom { transform:scaleX(-1); }
+@media(max-width:600px){ .cover-floral{width:82%;} .cover-floral--top{top:2%;}.cover-floral--bottom{bottom:2%;} }

@@ -1,7 +1,7 @@
 window.invitation = {
   novio: 'Marco',
   novia: 'Estrella',
-  fechaISO: '2026-11-14T16:00:00-05:00',
+  fechaISO: '2026-11-14T19:00:00-05:00',
   fechaTexto: '14 de noviembre de 2026',
   hora: '7:00 PM',
   lugar: 'La Casona Dorada Campestre',
@@ -11,7 +11,7 @@ window.invitation = {
   whatsappNovia: '+51 951 715 020',
   googleForm: 'https://docs.google.com/forms/d/e/1FAIpQLSdVAQ9maRKGIsaU1JQBjF1tCGE4pGK0JY_F9MqWXS9zxk6AGA/viewform?usp=header',
   musica: 'assets/audio/cancion.mp3',
-  musicaDisponible: false,
+  musicaDisponible: true,
   fotos: Array.from({ length: 14 }, (_, index) => `assets/images/foto-${String(index + 1).padStart(2, '0')}.jpg`),
   colores: {
     burgundy: '#52141F',
