@@ -25,7 +25,7 @@
 .day{text-align:center}.botanical--day{width:220px;right:-55px;top:50px;opacity:.12;transform:rotate(180deg)}.date-card{display:grid;grid-template-columns:1fr 1.2fr;max-width:650px;margin:48px auto 34px;background:var(--ivory);box-shadow:var(--shadow);border:1px solid rgba(82,20,31,.09);text-align:left}.date-card__left{padding:34px;text-align:center;background:var(--blush);color:var(--burgundy);display:flex;flex-direction:column;align-items:center;justify-content:center}.date-card__left small{font:700 9px var(--sans);letter-spacing:.2em}.date-card__left strong{font:500 92px/.8 var(--serif);margin:12px 0}.date-card__left span{font:700 12px var(--sans);letter-spacing:.22em}.date-card__left i{font:14px var(--serif);font-style:normal;margin-top:4px}.date-card__right{padding:36px;display:flex;flex-direction:column;justify-content:center}.date-card__right span{font:10px var(--sans);text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}.date-card__right strong{font:500 57px var(--serif);color:var(--burgundy);margin:10px 0}.date-card__right small{font:16px/1.4 var(--serif);color:var(--muted)}.countdown-title{font:13px var(--script);font-size:25px;color:var(--garnet);margin:20px 0 10px}.countdown{display:grid;grid-template-columns:repeat(4,1fr);max-width:640px;margin:0 auto;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.countdown>div{padding:20px 5px;position:relative}.countdown>div+div:before{content:"";position:absolute;left:0;top:22%;height:56%;width:1px;background:var(--line)}.countdown strong{display:block;font:500 clamp(34px,6vw,52px) var(--serif);color:var(--burgundy)}.countdown span{font:8px var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
 
 /* venue */
-.venue{min-height:780px;display:grid;place-items:center;text-align:center}.venue__glow{position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(239,149,87,.18),transparent 68%)}.botanical--venue{width:370px;left:-125px;bottom:-70px;transform:rotate(-32deg);color:var(--blush);opacity:.14}.venue-card{max-width:600px;margin:45px auto 0;padding:38px 30px;background:rgba(255,255,255,.07);border:1px solid rgba(244,205,212,.28);box-shadow:0 25px 80px rgba(0,0,0,.16);backdrop-filter:blur(7px)}.venue-card__stamp{width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;border:1px solid rgba(244,205,212,.45);font:27px var(--serif);color:var(--blush)}.venue-card__eyebrow{font:700 9px var(--sans);letter-spacing:.25em;color:var(--blush)}.venue-card h3{font:500 clamp(42px,8vw,62px)/.85 var(--serif);margin:12px 0;color:white}.venue-card h3 em{font-family:var(--script);font-style:normal;color:var(--peach);font-size:.75em}.venue-card__rule{width:70px;height:1px;background:var(--peach);margin:22px auto}.venue-card__address{font:17px/1.5 var(--serif);color:rgba(255,255,255,.76);margin:0}.venue-card__time{margin:23px 0}.venue-card__time span{display:block;text-transform:uppercase;letter-spacing:.18em;font:9px var(--sans);color:var(--blush)}.venue-card__time b{display:block;font:500 36px var(--serif);color:white;margin-top:3px}
+.venue{min-height:780px;display:grid;place-items:center;text-align:center;background:#C99A54;color:#52141F}.venue__glow{position:absolute;width:600px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(239,149,87,.18),transparent 68%)}.botanical--venue{width:370px;left:-125px;bottom:-70px;transform:rotate(-32deg);color:var(--blush);opacity:.14}.venue-card{max-width:600px;margin:45px auto 0;padding:38px 30px;background:#E7C88F;border:1px solid rgba(82,20,31,.18);box-shadow:0 25px 80px rgba(82,20,31,.16);backdrop-filter:blur(7px)}.venue-card__stamp{width:62px;height:62px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;border:1px solid rgba(244,205,212,.45);font:27px var(--serif);color:var(--blush)}.venue-card__eyebrow{font:700 9px var(--sans);letter-spacing:.25em;color:var(--blush)}.venue-card h3{font:500 clamp(42px,8vw,62px)/.85 var(--serif);margin:12px 0;color:white}.venue-card h3 em{font-family:var(--script);font-style:normal;color:var(--peach);font-size:.75em}.venue-card__rule{width:70px;height:1px;background:var(--peach);margin:22px auto}.venue-card__address{font:17px/1.5 var(--serif);color:rgba(255,255,255,.76);margin:0}.venue-card__time{margin:23px 0}.venue-card__time span{display:block;text-transform:uppercase;letter-spacing:.18em;font:9px var(--sans);color:var(--blush)}.venue-card__time b{display:block;font:500 36px var(--serif);color:white;margin-top:3px}
 
 /* memory */
 .memory-strip{padding:110px 22px}.memory-strip__inner{max-width:1050px;margin:auto;min-height:490px;display:grid;grid-template-columns:220px 1fr 220px;align-items:center;gap:30px;position:relative}.memory-strip__copy{text-align:center;color:var(--burgundy)}.memory-strip__copy p{font-size:40px;margin:0}.memory-strip__copy h2{font:500 clamp(50px,7vw,74px)/.82 var(--serif);margin:0}.memory-strip__copy h2 em{font-family:var(--script);font-style:normal;color:var(--garnet)}.memory-strip__copy span{display:block;margin-top:18px;font-size:18px}.memory-polaroid{background:var(--ivory);padding:9px 9px 36px;box-shadow:0 24px 50px rgba(82,20,31,.2);position:relative}.memory-polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}.memory-polaroid figcaption{position:absolute;bottom:10px;left:0;right:0;text-align:center;font:16px var(--script);color:var(--burgundy)}.memory-polaroid--left{transform:rotate(-6deg)}.memory-polaroid--right{transform:rotate(7deg)}
@@ -806,7 +806,7 @@
   --bg-hero: linear-gradient(180deg,#EF9557 0%,#ec9451 100%);
   --bg-story: linear-gradient(180deg,#f8dfe3 0%,#f4cfd5 100%);
   --bg-day: linear-gradient(180deg,#ffb272 0%,#f5a78d 100%);
-  --bg-venue: linear-gradient(145deg,#D99AA5 0%,#D99AA5 50%,#FFF9F4 100%);
+  --bg-venue: linear-gradient(145deg,#C99A54 0%,#C99A54 50%,#C99A54 100%);
   --bg-memory: linear-gradient(155deg,#ef9557 0%,#e58a50 100%);
   --bg-dress: linear-gradient(180deg,#FFF9F4 0%,#FFF9F4 100%);
   --bg-gallery: linear-gradient(180deg,#ef9557 0%,#f3a673 100%);
@@ -1016,3 +1016,254 @@
  .opening__paper-side-lines--bottom-left{bottom:12px;left:10px}
  .opening__paper-side-lines span{top:6px;right:6px;border-width:1px}
 }
+
+
+/* Nueva composición tipográfica de la hoja inicial: nombres y versículo. */
+.opening__paper .opening__topline--verse{
+  margin: 0 auto clamp(14px, 2.4vh, 23px);
+  position: relative;
+  z-index: 2;
+}
+.opening__invitation-copy{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  text-align: center;
+  color: #332b2a;
+}
+.opening__wedding-heading{
+  margin: 0 auto clamp(16px, 2.7vh, 25px);
+  max-width: 340px;
+  font-family: var(--serif);
+  font-size: clamp(14px, 3.1vw, 19px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  color: #302a29;
+}
+.opening__name-script{
+  margin: 0;
+  font-family: var(--script);
+  font-size: clamp(54px, 12vw, 76px);
+  line-height: .98;
+  font-weight: 400;
+  color: #b99a62;
+  text-shadow: 0 1px 0 rgba(255,255,255,.55);
+}
+.opening__ampersand{
+  margin: clamp(4px, 1vh, 10px) 0 clamp(4px, 1vh, 10px);
+  font-family: var(--serif);
+  font-size: clamp(35px, 7vw, 46px);
+  line-height: 1;
+  font-weight: 400;
+  color: #283747;
+}
+.opening__name-script--bride{
+  margin-bottom: clamp(15px, 2.5vh, 24px);
+}
+.opening__verse{
+  max-width: 360px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-size: clamp(15px, 3.55vw, 20px);
+  font-weight: 400;
+  line-height: 1.42;
+  color: #302a29;
+  text-wrap: pretty;
+}
+.opening__verse-reference{
+  margin: 7px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(15px, 3.4vw, 19px);
+  line-height: 1.2;
+  color: #302a29;
+}
+.opening__paper .opening__button{
+  margin-top: clamp(15px, 2.6vh, 24px);
+  position: relative;
+  z-index: 3;
+}
+.opening__paper .opening__hint{position:relative;z-index:3}
+@media(max-width:700px){
+  .opening__paper .opening__topline--verse{margin-bottom:clamp(12px,2vh,18px)}
+  .opening__wedding-heading{font-size:clamp(13px,3.45vw,17px);line-height:1.4;margin-bottom:clamp(14px,2.2vh,20px)}
+  .opening__name-script{font-size:clamp(51px,13vw,68px)}
+  .opening__ampersand{font-size:clamp(32px,8vw,42px)}
+  .opening__name-script--bride{margin-bottom:clamp(13px,2vh,19px)}
+  .opening__verse{font-size:clamp(14px,3.8vw,17px);line-height:1.4}
+  .opening__verse-reference{font-size:15px}
+  .opening__paper .opening__button{margin-top:clamp(12px,2vh,18px)}
+}
+@media(max-height:700px){
+  .opening__paper{padding-top:26px;padding-bottom:18px}
+  .opening__paper .opening__topline--verse{margin-bottom:10px}
+  .opening__wedding-heading{margin-bottom:12px}
+  .opening__name-script{font-size:clamp(46px,10vh,62px)}
+  .opening__name-script--bride{margin-bottom:11px}
+  .opening__verse{font-size:clamp(13px,2.5vh,16px)}
+  .opening__paper .opening__button{margin-top:10px;min-height:42px}
+}
+
+
+/* Ajuste solicitado: desplazar el encabezado hacia la derecha para despejar el ramo floral. */
+.opening__wedding-heading{
+  width: min(82%, 300px);
+  max-width: none;
+  margin-left: auto;
+  margin-right: 0;
+  font-size: clamp(12px, 2.75vw, 16px);
+  letter-spacing: .035em;
+  line-height: 1.42;
+  text-align: center;
+  position: relative;
+  left: 5px;
+}
+@media (max-width: 700px){
+  .opening__wedding-heading{
+    width: min(82%, 285px);
+    font-size: clamp(11px, 2.7vw, 15px);
+    left: 7px;
+    margin-bottom: clamp(14px, 2.2vh, 20px);
+  }
+}
+
+/* Ajuste final: encabezado completamente fuera del ramo floral superior izquierdo. */
+.opening__wedding-heading{
+  width: 76%;
+  max-width: 285px;
+  margin-left: auto;
+  margin-right: 0;
+  left: 0;
+  font-size: clamp(11px, 2.55vw, 15px);
+  letter-spacing: .025em;
+  line-height: 1.38;
+  text-align: center;
+  text-wrap: balance;
+}
+@media (max-width: 700px){
+  .opening__wedding-heading{
+    width: 76%;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: 0;
+    left: 0;
+    font-size: clamp(10px, 2.45vw, 14px);
+    letter-spacing: .015em;
+    line-height: 1.4;
+  }
+}
+
+
+/* Correccion reforzada: apartar el encabezado del ramo floral y mantenerlo dentro de la hoja. */
+.opening__wedding-heading{
+  width: 68% !important;
+  max-width: 265px !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  transform: translateX(38px);
+  font-size: clamp(10px, 2.35vw, 14px) !important;
+  letter-spacing: .015em !important;
+  line-height: 1.42 !important;
+  text-wrap: balance;
+}
+@media (max-width: 700px){
+  .opening__wedding-heading{
+    width: 68% !important;
+    max-width: 245px !important;
+    transform: translateX(30px);
+    font-size: clamp(10px, 2.55vw, 13px) !important;
+    line-height: 1.42 !important;
+  }
+}
+@media (max-width: 390px){
+  .opening__wedding-heading{
+    width: 66% !important;
+    max-width: 220px !important;
+    transform: translateX(22px);
+    font-size: 10px !important;
+  }
+}
+
+
+/* Calendario de noviembre 2026: estilo integrado a la paleta terracota y guinda. */
+.date-card{grid-template-columns:1.05fr 1fr;max-width:590px;overflow:hidden;}
+.date-card__left.date-card__calendar{padding:20px 18px 22px;background:var(--terracotta);color:var(--ivory);display:block;}
+.calendar__heading{display:flex;justify-content:center;align-items:baseline;gap:8px;margin-bottom:14px;color:var(--ivory);font-family:var(--serif);}
+.calendar__heading span{font-size:clamp(17px,2.5vw,22px);letter-spacing:.08em;}
+.calendar__heading strong{font-size:clamp(17px,2.5vw,22px);font-weight:500;}
+.calendar__week,.calendar__days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center;}
+.calendar__week{padding-bottom:8px;border-bottom:1px solid rgba(255,249,244,.35);font:700 8px var(--sans);letter-spacing:.03em;color:rgba(255,249,244,.92);}
+.calendar__days{row-gap:5px;padding-top:9px;align-items:center;}
+.calendar__days>span{position:relative;min-width:0;aspect-ratio:1;display:grid;place-items:center;font:15px var(--serif);color:var(--ivory);z-index:0;}
+.calendar__days>span.is-empty{visibility:hidden;}
+.calendar__days>span.calendar__wedding-day{font-weight:700;color:var(--burgundy);}
+.calendar__wedding-day::before{content:"";position:absolute;width:29px;height:29px;border-radius:50% 50% 48% 48%;background:var(--blush);border:1px solid var(--ivory);z-index:-1;box-shadow:0 2px 5px rgba(82,20,31,.18);}
+.calendar__wedding-day span{position:absolute;right:-1px;top:-4px;font:10px/1 var(--sans);color:var(--burgundy);}
+.date-card__right{padding:24px 20px;background:var(--terracotta);align-items:center;text-align:center;}
+.date-card__right span{color:rgba(255,249,244,.9);font-size:9px;}
+.date-card__right strong{font-size:57px;color:var(--ivory);white-space:nowrap;margin:10px 0;}
+.date-card__right small{color:rgba(255,249,244,.92);font-size:15px;}
+@media(max-width:760px){
+ .date-card{grid-template-columns:1fr;max-width:360px;}
+ .date-card__left.date-card__calendar{padding:19px 20px 20px;}
+ .calendar__heading{margin-bottom:12px;}
+ .calendar__week{font-size:9px;}
+ .calendar__days{row-gap:3px;padding-top:7px;}
+ .calendar__days>span{font-size:16px;}
+ .calendar__wedding-day::before{width:30px;height:30px;}
+ .date-card__right{padding:19px 18px 22px;}
+ .date-card__right strong{font-size:50px;margin:8px 0;}
+}
+
+
+/* Ajustes solicitados: sección de ubicación en dorado y textos principales borgoña */
+.venue .eyebrow--light{color:#52141F}
+.venue .section-title--light,
+.venue .section-title--light em{color:#52141F}
+.venue .venue-card h3 em{color:#52141F}
+.venue .venue-card__stamp{color:#52141F;border-color:rgba(82,20,31,.28)}
+.venue .venue-card__eyebrow{color:#52141F}
+.venue .venue-card__address{color:rgba(82,20,31,.86)}
+.venue .venue-card__time span{color:#772734}
+.venue .venue-card__time b{color:#52141F}
+.venue .venue-card__rule{background:#CA6846}
+
+
+/* Números elegantes, rectos y alineados en toda la invitación */
+.date-pill > span,
+.date-pill small,
+.calendar__heading strong,
+.calendar__days > span,
+.calendar__wedding-day span,
+.date-card__right strong,
+.countdown strong,
+.countdown span,
+.closing__date {
+  font-family: var(--sans), Arial, sans-serif;
+  font-style: normal;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  letter-spacing: 0.015em;
+}
+.date-pill > span { font-weight: 400; }
+.calendar__days > span { font-weight: 500; }
+.calendar__days > span.calendar__wedding-day { font-weight: 700; }
+.date-card__right strong, .countdown strong { font-weight: 500; }
+
+
+/* Sección de regalos: integrada a la paleta terracota, marfil y borgoña */
+.gifts{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:100px 22px;background:linear-gradient(180deg,#F4CDD4 0%,#FFF9F4 100%);color:#52141F}
+.gifts__inner{position:relative;z-index:1}
+.gifts .eyebrow{color:#CA6846}
+.gifts .section-title{color:#52141F;margin-bottom:34px}
+.gifts .section-title em{color:#CA6846}
+.gifts__card{position:relative;max-width:620px;margin:0 auto;padding:42px 34px 35px;background:linear-gradient(145deg,#FFF9F4,#F7EFE7);border:1px solid rgba(201,154,84,.75);box-shadow:0 18px 50px rgba(82,20,31,.10)}
+.gifts__card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,154,84,.38);pointer-events:none}
+.gifts__heart{display:grid;place-items:center;width:54px;height:54px;margin:0 auto 20px;border:1px solid #C99A54;border-radius:50%;font-family:var(--serif);font-size:32px;line-height:1;color:#772734}
+.gifts__card p{position:relative;max-width:470px;margin:0 auto;color:#765E60;font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.8}
+.gifts__flourish{display:block;margin-top:22px;color:#CA6846;letter-spacing:.35em}
+.gifts__ornament{position:absolute;z-index:0;width:150px;right:-35px;bottom:-20px;opacity:.12;pointer-events:none}
+@media(max-width:600px){.gifts{padding:76px 18px}.gifts__card{padding:34px 23px 29px}.gifts__ornament{width:110px;right:-28px}}
