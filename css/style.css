@@ -1297,3 +1297,255 @@
 @media(max-width:700px){
   .hero__verse-reference{margin-top:-8px;font-size:10px;letter-spacing:.1em}
 }
+
+
+/* Botón decorativo "Regalos" que abre el QR */
+.gifts__qr-action{display:flex;justify-content:center;margin:30px auto 4px}
+.gifts__qr-button{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:158px;min-height:158px;padding:18px 10px 14px;border:1px solid rgba(201,154,84,.8);border-radius:50%;background:radial-gradient(circle at 32% 25%,#8d263c 0%,#68172a 55%,#52141F 100%);color:#FFF9F4;box-shadow:0 10px 24px rgba(82,20,31,.22),inset 0 0 0 5px rgba(255,249,244,.10),inset 0 0 0 7px rgba(201,154,84,.42);cursor:pointer;transition:transform .22s ease,box-shadow .22s ease}
+.gifts__qr-button:hover,.gifts__qr-button:focus-visible{transform:translateY(-3px);box-shadow:0 15px 30px rgba(82,20,31,.28),inset 0 0 0 5px rgba(255,249,244,.13),inset 0 0 0 7px rgba(201,154,84,.58);outline:2px solid #CA6846;outline-offset:4px}
+.gifts__qr-seal{font-family:var(--script),cursive;font-size:clamp(30px,5vw,38px);font-style:italic;line-height:1.05;color:#FFF9F4;text-shadow:0 1px 1px rgba(0,0,0,.15);transform:rotate(-7deg)}
+.gifts__qr-open{font-family:var(--sans),Arial,sans-serif;font-size:10px;letter-spacing:.22em;font-weight:700;color:#F4CDD4}
+.gifts__qr-flower{position:absolute;z-index:-1;top:50%;width:80px;height:100px;background-image:url("assets/decor/flores-hoja-terracota.png");background-position:center;background-size:contain;background-repeat:no-repeat;opacity:.82;pointer-events:none;filter:drop-shadow(0 2px 2px rgba(82,20,31,.16))}
+.gifts__qr-flower--left{left:-45px;transform:translateY(-50%) rotate(-38deg)}
+.gifts__qr-flower--right{right:-45px;transform:translateY(-50%) scaleX(-1) rotate(-38deg)}
+.gift-qr-modal{position:fixed;z-index:10000;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease}
+.gift-qr-modal.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.gift-qr-modal__backdrop{position:absolute;inset:0;background:rgba(38,15,20,.78);backdrop-filter:blur(5px)}
+.gift-qr-modal__dialog{position:relative;z-index:1;width:min(100%,440px);max-height:min(92dvh,900px);overflow:auto;padding:30px 24px 24px;background:linear-gradient(145deg,#FFF9F4,#F7EFE7);border:1px solid #C99A54;border-radius:18px;box-shadow:0 24px 80px rgba(0,0,0,.32);text-align:center;color:#52141F}
+.gift-qr-modal__close{position:absolute;top:10px;right:12px;display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(82,20,31,.18);border-radius:50%;background:#FFF9F4;color:#52141F;font-family:Arial,sans-serif;font-size:30px;line-height:1;cursor:pointer}
+.gift-qr-modal__dialog .eyebrow{margin:8px 35px 8px;color:#CA6846}
+.gift-qr-modal__dialog h2{margin:0 30px 8px;color:#52141F;font-family:var(--serif),Georgia,serif;font-size:clamp(25px,5vw,32px);font-weight:400}
+.gift-qr-modal__intro{margin:0 auto 16px;max-width:310px;color:#765E60;font-family:var(--serif),Georgia,serif;line-height:1.6}
+.gift-qr-modal__image{display:block;width:min(100%,340px);max-height:58dvh;object-fit:contain;margin:0 auto;border-radius:8px;background:#fff}
+.gift-qr-modal__name{margin:14px 0 0;color:#52141F;font-family:var(--sans),Arial,sans-serif;font-size:13px;line-height:1.5;letter-spacing:.02em}
+body.gift-qr-open{overflow:hidden}
+@media(max-width:480px){.gifts__qr-button{width:145px;min-height:145px}.gifts__qr-flower{width:68px;height:88px}.gift-qr-modal{padding:12px}.gift-qr-modal__dialog{padding:28px 16px 18px}.gift-qr-modal__image{max-height:55dvh}}
+@media(prefers-reduced-motion:reduce){.gifts__qr-button,.gift-qr-modal{transition:none}}
+
+
+/* Ampersands: refined wedding-style glyph, consistently smaller across the project */
+.hero__names em,
+.closing__names em {
+  font-family: var(--serif), "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: .72em;
+  line-height: 1;
+  vertical-align: .06em;
+  letter-spacing: -.045em;
+  color: var(--terracotta);
+}
+.closing__names em { color: var(--garnet); }
+.opening__ampersand {
+  font-family: var(--serif), Georgia, serif;
+  font-style: italic;
+  font-size: clamp(27px, 5vw, 35px);
+  font-weight: 400;
+  line-height: 1;
+}
+.rsvp-card__amp {
+  font-family: var(--serif), Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+
+/* Family, godparents and witnesses section — matched to the invitation palette */
+.family-section {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 0% 12%, rgba(239,149,87,.15), transparent 34%),
+    radial-gradient(ellipse at 100% 88%, rgba(119,39,52,.10), transparent 35%),
+    var(--paper);
+  padding-top: clamp(76px, 10vw, 112px);
+  padding-bottom: clamp(78px, 10vw, 118px);
+}
+.family-section::before,
+.family-section::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(202,104,70,.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.family-section::before { top: -115px; left: -100px; }
+.family-section::after { right: -110px; bottom: -115px; }
+.family-section__inner { max-width: 980px; }
+.family-section__ornament {
+  display:flex; align-items:center; justify-content:center; gap:13px;
+  width:min(260px,70%); margin:0 auto 19px; color:#CA6846;
+}
+.family-section__ornament span { height:1px; flex:1; background:linear-gradient(90deg,transparent,rgba(202,104,70,.75)); }
+.family-section__ornament span:last-child { transform:scaleX(-1); }
+.family-section__ornament b { font-size:15px; font-weight:400; }
+.family-section .eyebrow { text-align:center; margin-bottom:12px; }
+.family-section__title {
+  margin:0; text-align:center; color:#52141F;
+  font-family:var(--serif); font-size:clamp(38px,6.2vw,65px); font-weight:400;
+  line-height:1.04; letter-spacing:-.035em;
+}
+.family-section__title em { color:#CA6846; font-style:italic; }
+.family-section__subtitle {
+  margin:8px 0 42px; text-align:center; color:#772734;
+  font-family:var(--script); font-size:clamp(27px,4vw,38px); line-height:1.2;
+}
+.family-section__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.family-card {
+  position:relative; overflow:hidden; padding:31px 25px 29px;
+  text-align:center; border:1px solid rgba(202,104,70,.42); border-radius:4px;
+  background:rgba(255,249,244,.82); box-shadow:0 12px 32px rgba(82,20,31,.055);
+}
+.family-card::before { content:""; position:absolute; inset:7px; border:1px solid rgba(202,104,70,.18); pointer-events:none; }
+.family-card--soft { background:linear-gradient(145deg,rgba(244,205,212,.48),rgba(255,249,244,.93)); }
+.family-card__number { display:block; margin-bottom:5px; color:#CA6846; font-family:var(--serif); font-size:16px; letter-spacing:.18em; }
+.family-card__eyebrow { margin:0 0 5px; color:var(--muted); font-size:9px; font-weight:600; letter-spacing:.17em; text-transform:uppercase; }
+.family-card h3 { margin:0 0 17px; color:#52141F; font-family:var(--serif); font-size:clamp(28px,3.2vw,35px); font-weight:400; line-height:1.1; }
+.family-card ul { list-style:none; margin:0; padding:0; }
+.family-card li { color:var(--ink); font-family:var(--serif); font-size:clamp(17px,2vw,20px); line-height:1.55; overflow-wrap:anywhere; }
+.family-card li + li { margin-top:3px; }
+.family-section__closing { margin:34px auto 0; text-align:center; max-width:560px; color:#772734; }
+.family-section__heart { display:inline-flex; align-items:center; justify-content:center; width:35px; height:35px; border:1px solid rgba(202,104,70,.55); border-radius:50%; color:#CA6846; font-size:25px; line-height:1; }
+.family-section__closing p { margin:12px 0 0; font-family:var(--script); font-size:clamp(26px,4vw,35px); line-height:1.25; }
+.family-section__mobile-break { display:none; }
+
+
+/* Sello M & E de Confirmar asistencia: más legible y equilibrado */
+.rsvp-card__seal {
+  width: 92px;
+  height: 92px;
+  border: 1.5px solid rgba(119, 39, 52, .52);
+  border-radius: 50%;
+  background: rgba(255, 249, 244, .10);
+  gap: 1px;
+  padding: 0 7px;
+  margin: 0 auto 22px;
+  box-shadow: 0 0 0 4px rgba(244, 205, 212, .12);
+  color: #52141F;
+}
+
+.rsvp-card__seal .rsvp-card__initial {
+  font-family: var(--serif), Georgia, serif;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 400;
+  color: #FFF9F4;
+}
+
+.rsvp-card__seal .rsvp-card__amp {
+  font-family: var(--serif), Georgia, serif;
+  font-size: 23px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 400;
+  color: #772734;
+  transform: translateY(1px);
+}
+
+
+/* Galería reorganizada tras retirar las fotografías seleccionadas */
+.gallery-mosaic {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: clamp(145px, 24vw, 245px);
+  gap: 14px;
+  align-items: stretch;
+}
+.gallery-mosaic .gallery-item {
+  grid-column: auto;
+  grid-row: auto;
+  min-width: 0;
+  min-height: 0;
+}
+.gallery-mosaic .gallery-item--1 {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+}
+.gallery-mosaic .gallery-item--2,
+.gallery-mosaic .gallery-item--3 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.gallery-mosaic .gallery-item--4 {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+}
+.gallery-mosaic .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-mosaic .gallery-item {
+  overflow: hidden;
+}
+@media (max-width: 560px) {
+  .gallery-mosaic {
+    grid-auto-rows: 118px;
+    gap: 10px;
+    margin-top: 34px;
+  }
+  .gallery-mosaic .gallery-item--1,
+  .gallery-mosaic .gallery-item--4 {
+    grid-row: span 2;
+  }
+  .gallery-mosaic .gallery-item--2,
+  .gallery-mosaic .gallery-item--3 {
+    grid-row: span 2;
+  }
+}
+
+
+/* Galería: cuadrícula uniforme, limpia y equilibrada */
+.gallery-mosaic {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-auto-rows: auto !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+.gallery-mosaic .gallery-item,
+.gallery-mosaic .gallery-item--1,
+.gallery-mosaic .gallery-item--2,
+.gallery-mosaic .gallery-item--3,
+.gallery-mosaic .gallery-item--4 {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.gallery-mosaic .gallery-item img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+@media (min-width: 700px) {
+  .gallery-mosaic {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+}
+@media (max-width: 420px) {
+  .gallery-mosaic {
+    gap: 8px !important;
+  }
+  .gallery-mosaic .gallery-item,
+  .gallery-mosaic .gallery-item--1,
+  .gallery-mosaic .gallery-item--2,
+  .gallery-mosaic .gallery-item--3,
+  .gallery-mosaic .gallery-item--4 {
+    aspect-ratio: 3 / 4 !important;
+  }
+}

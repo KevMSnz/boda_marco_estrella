@@ -96,3 +96,15 @@
     line-height: 1.2;
   }
 }
+
+
+@media(max-width:600px){
+  .family-section { padding:72px 17px 78px; }
+  .family-section__subtitle { margin-bottom:29px; }
+  .family-section__grid { grid-template-columns:1fr; gap:15px; max-width:440px; margin:0 auto; }
+  .family-card { padding:27px 18px 25px; }
+  .family-card h3 { font-size:31px; }
+  .family-card li { font-size:19px; }
+  .family-section__closing { margin-top:27px; }
+  .family-section__mobile-break { display:block; }
+}
