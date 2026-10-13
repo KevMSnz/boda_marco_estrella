@@ -1267,3 +1267,33 @@
 .gifts__flourish{display:block;margin-top:22px;color:#CA6846;letter-spacing:.35em}
 .gifts__ornament{position:absolute;z-index:0;width:150px;right:-35px;bottom:-20px;opacity:.12;pointer-events:none}
 @media(max-width:600px){.gifts{padding:76px 18px}.gifts__card{padding:34px 23px 29px}.gifts__ornament{width:110px;right:-28px}}
+
+
+/* Calendario ilustrado enviado para la sección de fecha */
+.date-card{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch}
+.date-card__image-wrap{min-width:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--ivory);border:1px solid rgba(201,154,84,.35)}
+.date-card__image{display:block;width:100%;height:100%;min-height:420px;object-fit:contain;object-position:center;background:var(--ivory)}
+.date-card__right{background:var(--terracotta);display:flex;flex-direction:column;justify-content:center}
+.date-card__right strong{font-family:var(--serif),Georgia,serif;font-style:normal;font-weight:400;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.035em;font-size:clamp(43px,5vw,58px);line-height:1.1}
+@media(max-width:760px){
+  .date-card{grid-template-columns:1fr;max-width:370px}
+  .date-card__image-wrap{width:100%}
+  .date-card__image{width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:2/3;object-fit:contain}
+  .date-card__right{padding:24px 18px 26px}
+  .date-card__right strong{font-size:clamp(42px,12vw,54px)}
+}
+
+
+/* Referencia bíblica bajo la frase de portada */
+.hero__verse-reference{
+  margin:-12px auto 0;
+  color:rgba(82,20,31,.72);
+  font-family:var(--sans),Arial,sans-serif;
+  font-size:clamp(10px,1.25vw,12px);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  line-height:1.5;
+}
+@media(max-width:700px){
+  .hero__verse-reference{margin-top:-8px;font-size:10px;letter-spacing:.1em}
+}
