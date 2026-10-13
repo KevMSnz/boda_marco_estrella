@@ -1448,104 +1448,13 @@ body.gift-qr-open{overflow:hidden}
 }
 
 
-/* Galería reorganizada tras retirar las fotografías seleccionadas */
-.gallery-mosaic {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: clamp(145px, 24vw, 245px);
-  gap: 14px;
-  align-items: stretch;
-}
-.gallery-mosaic .gallery-item {
-  grid-column: auto;
-  grid-row: auto;
-  min-width: 0;
-  min-height: 0;
-}
-.gallery-mosaic .gallery-item--1 {
-  grid-column: 1 / -1;
-  grid-row: span 2;
-}
-.gallery-mosaic .gallery-item--2,
-.gallery-mosaic .gallery-item--3 {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-.gallery-mosaic .gallery-item--4 {
-  grid-column: 1 / -1;
-  grid-row: span 2;
-}
-.gallery-mosaic .gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.gallery-mosaic .gallery-item {
-  overflow: hidden;
-}
-@media (max-width: 560px) {
-  .gallery-mosaic {
-    grid-auto-rows: 118px;
-    gap: 10px;
-    margin-top: 34px;
-  }
-  .gallery-mosaic .gallery-item--1,
-  .gallery-mosaic .gallery-item--4 {
-    grid-row: span 2;
-  }
-  .gallery-mosaic .gallery-item--2,
-  .gallery-mosaic .gallery-item--3 {
-    grid-row: span 2;
-  }
-}
+/* Seguridad adicional: el QR permanece fuera del flujo hasta pulsar Regalos. */
+.gift-qr-modal[hidden] { display: none !important; }
 
 
-/* Galería: cuadrícula uniforme, limpia y equilibrada */
-.gallery-mosaic {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-auto-rows: auto !important;
-  gap: 12px !important;
-  align-items: stretch !important;
-}
-.gallery-mosaic .gallery-item,
-.gallery-mosaic .gallery-item--1,
-.gallery-mosaic .gallery-item--2,
-.gallery-mosaic .gallery-item--3,
-.gallery-mosaic .gallery-item--4 {
-  grid-column: auto !important;
-  grid-row: auto !important;
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 4 / 5 !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  position: relative !important;
-}
-.gallery-mosaic .gallery-item img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-}
-@media (min-width: 700px) {
-  .gallery-mosaic {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 16px !important;
-  }
-}
-@media (max-width: 420px) {
-  .gallery-mosaic {
-    gap: 8px !important;
-  }
-  .gallery-mosaic .gallery-item,
-  .gallery-mosaic .gallery-item--1,
-  .gallery-mosaic .gallery-item--2,
-  .gallery-mosaic .gallery-item--3,
-  .gallery-mosaic .gallery-item--4 {
-    aspect-ratio: 3 / 4 !important;
-  }
-}
+/* Galería depurada: solo conserva las fotografías aprobadas y mantiene una cuadrícula uniforme. */
+.gallery-mosaic--clean{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(180px,28vw,320px);gap:16px;max-width:760px}
+.gallery-mosaic--clean .gallery-item{grid-column:auto;grid-row:auto;min-width:0;transform:none;aspect-ratio:4/5}
+.gallery-mosaic--clean .gallery-item:nth-child(2n){transform:translateY(10px)}
+.gallery-mosaic--clean .gallery-item img{object-position:center;}
+@media(max-width:600px){.gallery-mosaic--clean{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;gap:10px;margin-top:30px}.gallery-mosaic--clean .gallery-item{aspect-ratio:3/4;min-height:0}.gallery-mosaic--clean .gallery-item:nth-child(2n){transform:translateY(6px)}.gallery-mosaic--clean .gallery-item figcaption{left:9px;right:9px;bottom:9px;font-size:15px}}
